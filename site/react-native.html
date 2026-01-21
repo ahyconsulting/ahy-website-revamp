@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <!-- Google tag (gtag.js) -->
@@ -33,28 +33,156 @@
 
                 gtag("js", new Date());
                 gtag("config", "G-8Q53P5QHZ5", {
-                send_page_view: true,
+                    send_page_view: true,
                 });
             }
 
-            ["scroll", "click", "mousemove", "touchstart"].forEach((e) =>
-                window.addEventListener(e, loadGA, { once: true, passive: true })
-            );
+            ["scroll", "click", "mousemove", "touchstart"].forEach((e) => window.addEventListener(e, loadGA, { once: true, passive: true }));
         </script>
         <script>
             window.ASSET_VERSION = Date.now();
         </script>
+        <!-- Schema.Org Text -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "@id": "https://ahy-website-revamp.ahyconsulting.workers.dev/react-native",
+                "url": "https://ahy-website-revamp.ahyconsulting.workers.dev/react-native",
+                "name": "React Native Development – Ahy Consulting",
+                "isPartOf": {
+                    "@type": "WebSite",
+                    "@id": "https://ahy-website-revamp.ahyconsulting.workers.dev/#website"
+                }
+            }
+        </script>
+
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://ahy-website-revamp.ahyconsulting.workers.dev/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "React Native Development",
+                        "item": "https://ahy-website-revamp.ahyconsulting.workers.dev/react-native"
+                    }
+                ]
+            }
+        </script>
+
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "@id": "https://ahy-website-revamp.ahyconsulting.workers.dev/#business",
+                "name": "Ahy Consulting",
+                "url": "https://ahy-website-revamp.ahyconsulting.workers.dev/",
+                "logo": "https://ahy-website-revamp.ahyconsulting.workers.dev/assets/ahy-logo.webp",
+                "sameAs": ["https://www.facebook.com/ahyconsulting", "https://www.twitter.com/ahyconsulting", "https://www.instagram.com/ahyconsulting/", "https://www.linkedin.com/in/ahyharpreet"]
+            }
+        </script>
+
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "ItemList",
+                "name": "Ahy Consulting React Native Services",
+                "itemListElement": [
+                    {
+                        "@type": "Service",
+                        "position": 1,
+                        "name": "React Native App Development",
+                        "provider": {
+                            "@id": "https://ahy-website-revamp.ahyconsulting.workers.dev/#business"
+                        }
+                    },
+                    {
+                        "@type": "Service",
+                        "position": 2,
+                        "name": "Cross-Platform Mobile App Development",
+                        "provider": {
+                            "@id": "https://ahy-website-revamp.ahyconsulting.workers.dev/#business"
+                        }
+                    },
+                    {
+                        "@type": "Service",
+                        "position": 3,
+                        "name": "React Native App Migration & Optimization",
+                        "provider": {
+                            "@id": "https://ahy-website-revamp.ahyconsulting.workers.dev/#business"
+                        }
+                    }
+                ]
+            }
+        </script>
+
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "How much time does it take to build an eCommerce Website?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "You can start selling online in 2 days, on your own website. Obviously, it will come along with very basic features. For something bespoke and custom, it may take somewhere between 6–10 weeks."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How to get a website developed for free?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Absolutely. You just need to learn HTML, CSS, JavaScript, jQuery, PHP, a content management system like WordPress to develop a basic website. But we recommend you focus on your business while we take care of the technology."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How can I bring my business online? How much time will it take?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "You need a reliable advisor who can guide you in bringing your business online. Someone who has helped many other businesses to get online. A very simple setup can take 1 week, while more complex and custom solutions may take a few months."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What if I do not like the design?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Our design process aims to avoid this situation. However, if you are not pleased with the designs, it is completely fine. We will patiently listen to what is not aligning with your expectations and find the right solution."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Is my website going to be SEO friendly?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "100%. We strongly believe that a website should be SEO friendly. There is no point in a beautiful website that cannot be marketed. We follow and implement best development practices to ensure strong online visibility."
+                        }
+                    }
+                ]
+            }
+        </script>
 
         <!-- Preload main CSS asynchronously -->
-        <link rel="preload" href="css/main.css?v=dev" as="style" onload="this.rel='stylesheet'" />
+        <link rel="preload" href="css/main.css?v=dev" as="style" onload="this.rel = 'stylesheet'" />
         <noscript><link rel="stylesheet" href="css/main.css?v=dev" /></noscript>
 
         <!-- Preload fonts CSS asynchronously -->
-        <link rel="preload" href="fonts.css" as="style" onload="this.rel='stylesheet'" />
+        <link rel="preload" href="fonts.css" as="style" onload="this.rel = 'stylesheet'" />
         <noscript><link rel="stylesheet" href="fonts.css" /></noscript>
 
         <!-- Preload technology CSS asynchronously -->
-        <link rel="preload" href="/css/technologyCss/technology.css?v=dev" as="style" onload="this.rel='stylesheet'" />
+        <link rel="preload" href="/css/technologyCss/technology.css?v=dev" as="style" onload="this.rel = 'stylesheet'" />
         <noscript><link rel="stylesheet" href="/css/technologyCss/technology.css?v=dev" /></noscript>
 
         <!-- Preconnect for Google Fonts (keep in head, not render-blocking) -->
