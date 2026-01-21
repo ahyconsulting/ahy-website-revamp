@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <!-- Google tag (gtag.js) -->
@@ -35,13 +35,11 @@
 
                 gtag("js", new Date());
                 gtag("config", "G-8Q53P5QHZ5", {
-                send_page_view: true,
+                    send_page_view: true,
                 });
             }
 
-            ["scroll", "click", "mousemove", "touchstart"].forEach((e) =>
-                window.addEventListener(e, loadGA, { once: true, passive: true })
-            );
+            ["scroll", "click", "mousemove", "touchstart"].forEach((e) => window.addEventListener(e, loadGA, { once: true, passive: true }));
         </script>
         <script>
             window.ASSET_VERSION = Date.now();
@@ -63,6 +61,95 @@
                 font-size: clamp(1.8rem, 3vw, 2.6rem);
             }
         </style>
+
+        <!-- Schema.Org Text -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "@id": "https://ahy-website-revamp.ahyconsulting.workers.dev/career",
+                "url": "https://ahy-website-revamp.ahyconsulting.workers.dev/career",
+                "name": "Careers at Ahy Consulting",
+                "isPartOf": {
+                    "@type": "WebSite",
+                    "@id": "https://ahy-website-revamp.ahyconsulting.workers.dev/#website"
+                }
+            }
+        </script>
+
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://ahy-website-revamp.ahyconsulting.workers.dev/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Career",
+                        "item": "https://ahy-website-revamp.ahyconsulting.workers.dev/career"
+                    }
+                ]
+            }
+        </script>
+
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "@id": "https://ahy-website-revamp.ahyconsulting.workers.dev/#business",
+                "name": "Ahy Consulting",
+                "url": "https://ahy-website-revamp.ahyconsulting.workers.dev/",
+                "logo": "https://ahy-website-revamp.ahyconsulting.workers.dev/assets/ahy-logo.webp"
+            }
+        </script>
+
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "name": "Career FAQs",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Is my website going to be SEO friendly?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "100%. We strongly believe that a website should be SEO friendly, there is no point of a beautiful website that can't be marketed. We follow and implement best development practices to ensure the website is visible online."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How much time does it take to build an eCommerce Website?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "You can start selling online in 2 days, on your own website. Obviously, it will come along with very basic features. For something bespoke and custom, it may take somewhere between 6–10 weeks."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Can I get a website developed for free?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "While free website builders exist, we recommend professional development to ensure scalability, security, and reliability for your business. Investing in a proper solution saves time and cost in the long run."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What skills are required to start a career in web development?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Essential skills include HTML, CSS, JavaScript, and familiarity with CMS or frameworks like WordPress or Magento. Problem-solving, adaptability, and continuous learning are key to a successful career in development."
+                        }
+                    }
+                ]
+            }
+        </script>
     </head>
 
     <body data-page="career">

@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <!-- Google tag (gtag.js) -->
-    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-8Q53P5QHZ5"></script>
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-8Q53P5QHZ5"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag() {
@@ -12,141 +12,150 @@
 
             gtag("config", "G-8Q53P5QHZ5");
         </script> -->
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=10.0, user-scalable=yes"
-    />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=10.0, user-scalable=yes" />
 
-    <title>
-      About | Ahy Consulting | Driven by Innovation, Defined by Quality
-    </title>
-    <meta
-      name="description"
-      content="Learn how Ahy Consulting grew into a trusted digital partner, driven by strong values, a clear vision, and a passion for delivering quality-focused solutions."
-    />
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
+        <title>About | Ahy Consulting | Driven by Innovation, Defined by Quality</title>
+        <meta name="description" content="Learn how Ahy Consulting grew into a trusted digital partner, driven by strong values, a clear vision, and a passion for delivering quality-focused solutions." />
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
 
-      let gaLoaded = false;
+            let gaLoaded = false;
 
-      function loadGA() {
-        if (gaLoaded) return;
-        gaLoaded = true;
+            function loadGA() {
+                if (gaLoaded) return;
+                gaLoaded = true;
 
-        const s = document.createElement("script");
-        s.src = "https://www.googletagmanager.com/gtag/js?id=G-8Q53P5QHZ5";
-        s.async = true;
-        document.head.appendChild(s);
+                const s = document.createElement("script");
+                s.src = "https://www.googletagmanager.com/gtag/js?id=G-8Q53P5QHZ5";
+                s.async = true;
+                document.head.appendChild(s);
 
-        gtag("js", new Date());
-        gtag("config", "G-8Q53P5QHZ5", {
-          send_page_view: true,
-        });
-      }
+                gtag("js", new Date());
+                gtag("config", "G-8Q53P5QHZ5", {
+                    send_page_view: true,
+                });
+            }
 
-      ["scroll", "click", "mousemove", "touchstart"].forEach((e) =>
-        window.addEventListener(e, loadGA, { once: true, passive: true })
-      );
-    </script>
+            ["scroll", "click", "mousemove", "touchstart"].forEach((e) => window.addEventListener(e, loadGA, { once: true, passive: true }));
+        </script>
 
-    <!-- Asset Version (DEV MODE) -->
-    <script>
-      window.ASSET_VERSION = Date.now();
-    </script>
-    <script defer src="/js/circletype.min.js?v=dev"></script>
-    <!-- Main Styles -->
-    <link
-      rel="preload"
-      href="css/main.css?v=dev"
-      as="style"
-      onload="this.rel='stylesheet'"
-    />
-    <noscript><link rel="stylesheet" href="css/main.css?v=dev" /></noscript>
+        <!-- Asset Version (DEV MODE) -->
+        <script>
+            window.ASSET_VERSION = Date.now();
+        </script>
 
-    <!-- Preload fonts CSS asynchronously -->
-    <link
-      rel="preload"
-      href="fonts.css"
-      as="style"
-      onload="this.rel='stylesheet'"
-    />
-    <noscript><link rel="stylesheet" href="fonts.css" /></noscript>
-    <link rel="shortcut icon" href="/assets/ahy-logo.webp" type="image/webp" />
-    <link
-      rel="preload"
-      as="image"
-      href="/assets/ahy-logo.webp"
-      fetchpriority="high"
-    />
-    <style>
-      h1 {
-        font-family: var(--ahy-heading-font-tomorrow);
-        font-weight: var(--ahy-weight-bold);
-        font-size: clamp(2.2rem, 4vw, 3.5rem);
-        line-height: 1.1;
-      }
+        <!-- Schema.Org Text -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "@id": "https://ahy-website-revamp.ahyconsulting.workers.dev/who-we-are",
+                "url": "https://ahy-website-revamp.ahyconsulting.workers.dev/who-we-are",
+                "name": "About Ahy Consulting",
+                "description": "Learn more about Ahy Consulting, a website design and development agency specializing in Magento, WordPress, and eCommerce solutions.",
+                "isPartOf": {
+                    "@type": "WebSite",
+                    "@id": "https://ahy-website-revamp.ahyconsulting.workers.dev/#website"
+                },
+                "about": {
+                    "@type": "ProfessionalService",
+                    "@id": "https://ahy-website-revamp.ahyconsulting.workers.dev/#business"
+                }
+            }
+        </script>
 
-      section h1 {
-        font-size: clamp(1.8rem, 3vw, 2.6rem);
-      }
-    </style>
-  </head>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://ahy-website-revamp.ahyconsulting.workers.dev/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "About",
+                        "item": "https://ahy-website-revamp.ahyconsulting.workers.dev/who-we-are"
+                    }
+                ]
+            }
+        </script>
+        <script defer src="/js/circletype.min.js?v=dev"></script>
+        <!-- Main Styles -->
+        <link rel="preload" href="css/main.css?v=dev" as="style" onload="this.rel = 'stylesheet'" />
+        <noscript><link rel="stylesheet" href="css/main.css?v=dev" /></noscript>
 
-  <body data-page="about">
-    <!-- Background -->
-    <div class="gradient-blobs">
-      <video
-        class="blobs-video"
-        src="/assets/video/background-video.mp4"
-        autoplay
-        muted
-        loop
-        playsinline
-      ></video>
-      <div class="blob blob-1"></div>
-      <div class="blob blob-2"></div>
-      <div class="blob blob-3"></div>
-      <div class="blob blob-4"></div>
-      <div class="blob blob-5"></div>
-    </div>
+        <!-- Preload fonts CSS asynchronously -->
+        <link rel="preload" href="fonts.css" as="style" onload="this.rel = 'stylesheet'" />
+        <noscript><link rel="stylesheet" href="fonts.css" /></noscript>
+        <link rel="shortcut icon" href="/assets/ahy-logo.webp" type="image/webp" />
+        <link rel="preload" as="image" href="/assets/ahy-logo.webp" fetchpriority="high" />
+        <style>
+            h1 {
+                font-family: var(--ahy-heading-font-tomorrow);
+                font-weight: var(--ahy-weight-bold);
+                font-size: clamp(2.2rem, 4vw, 3.5rem);
+                line-height: 1.1;
+            }
 
-    <!-- ScrollSmoother wrapper -->
-    <div id="smooth-wrapper">
-      <div data-component="header"></div>
+            section h1 {
+                font-size: clamp(1.8rem, 3vw, 2.6rem);
+            }
+        </style>
+    </head>
 
-      <div id="smooth-content">
-        <main>
-          <div data-component="heroSection"></div>
-          <div data-component="timelineAbout"></div>
-          <div data-component="whatPartnersSay"></div>
-          <div data-component="contactUsSection"></div>
-        </main>
+    <body data-page="about">
+        <!-- Background -->
+        <div class="gradient-blobs">
+            <video class="blobs-video" src="/assets/video/background-video.mp4" autoplay muted loop playsinline></video>
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+            <div class="blob blob-4"></div>
+            <div class="blob blob-5"></div>
+        </div>
 
-        <div data-component="footer"></div>
-      </div>
-    </div>
+        <!-- ScrollSmoother wrapper -->
+        <div id="smooth-wrapper">
+            <div data-component="header"></div>
 
-    <div data-component="rotatingBadge"></div>
+            <div id="smooth-content">
+                <main>
+                    <div data-component="heroSection"></div>
+                    <div data-component="timelineAbout"></div>
+                    <div data-component="whatPartnersSay"></div>
+                    <div data-component="contactUsSection"></div>
+                </main>
 
-    <!-- GSAP (Local Single Source) -->
-    <script defer src="/js/gsap.min.js?v=dev"></script>
-    <script defer src="/js/ScrollSmoother.min.js?v=dev"></script>
-    <script defer src="/js/ScrollTrigger.min.js?v=dev"></script>
-    <script defer src="/js/Flip.min.js?v=dev"></script>
-    <script defer src="/js/MotionPath.min.js?v=dev"></script>
+                <div data-component="footer"></div>
+            </div>
+        </div>
 
-    <script defer src="/js/SplitText.min.js?v=dev"></script>
-    <script defer src="/js/ScrollToPlugin.min.js?v=dev"></script>
-    <script defer src="/js/ScrambleTextPlugin.min.js?v=dev"></script>
+        <div data-component="rotatingBadge"></div>
 
-    <!-- Component Loader (MUST be before main.js) -->
-    <script defer src="js/componentLoader.js?v=dev"></script>
+        <!-- GSAP (Local Single Source) -->
+        <script defer src="/js/gsap.min.js?v=dev"></script>
+        <script defer src="/js/ScrollSmoother.min.js?v=dev"></script>
+        <script defer src="/js/ScrollTrigger.min.js?v=dev"></script>
+        <script defer src="/js/Flip.min.js?v=dev"></script>
+        <script defer src="/js/MotionPath.min.js?v=dev"></script>
 
-    <!-- Main App -->
-    <script defer src="js/gsap-smooth-scroll.js"></script>
-  </body>
+        <script defer src="/js/SplitText.min.js?v=dev"></script>
+        <script defer src="/js/ScrollToPlugin.min.js?v=dev"></script>
+        <script defer src="/js/ScrambleTextPlugin.min.js?v=dev"></script>
+
+        <!-- Component Loader (MUST be before main.js) -->
+        <script defer src="js/componentLoader.js?v=dev"></script>
+
+        <!-- Main App -->
+        <script defer src="js/gsap-smooth-scroll.js"></script>
+    </body>
 </html>
