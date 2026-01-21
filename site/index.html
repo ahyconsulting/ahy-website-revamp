@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=10.0, user-scalable=yes" />
+        <link rel="preload" href="/assets/ahy_showreel_mobile.mp4" as="video" />
+        <link rel="preload" href="/assets/ahy_showreel_desktop.mp4" as="video" />
+        <title>Leading Progressive Stack Development Agency | Ahy Consulting</title>
+        <meta name="description" content="Empower your digital ecosystem with cutting-edge progressive stack development. From Magento to React Native, our expert team builds fast, reliable, and scalable eCommerce and web applications." />
+
+        <!-- Asset Version (DEV MODE) -->
+        <script>
+            window.ASSET_VERSION = Date.now();
+        </script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+
+            let gaLoaded = false;
+
+            function loadGA() {
+                if (gaLoaded) return;
+                gaLoaded = true;
+
+                const s = document.createElement("script");
+                s.src = "https://www.googletagmanager.com/gtag/js?id=G-8Q53P5QHZ5";
+                s.async = true;
+                document.head.appendChild(s);
+
+                gtag("js", new Date());
+                gtag("config", "G-8Q53P5QHZ5", {
+                    send_page_view: true,
+                });
+            }
+
+            ["scroll", "click", "mousemove", "touchstart"].forEach((e) => window.addEventListener(e, loadGA, { once: true, passive: true }));
+        </script>
+
+        <!-- Module Preload -->
+        <link rel="modulepreload" href="/js/main.js?v=dev" />
+        <!-- Cookie Consent (OrestBida v2) -->
+        <link
+            rel="preload"
+            href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v2.8.0/dist/cookieconsent.css"
+            as="style"
+            onload="
+                this.onload = null;
+                this.rel = 'stylesheet';
+            "
+        />
+
+        <noscript>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v2.8.0/dist/cookieconsent.css" />
+        </noscript>
+
+        <link rel="preload" href="/css/cookieConsent.css" as="style" />
+        <link rel="stylesheet" href="/css/cookieConsent.css" media="print" onload="this.media = 'all'" />
+
+        <script defer src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v2.8.0/dist/cookieconsent.js"></script>
+
+        <style>
+            body {
+                opacity: 0;
+                background-color: #ffffff !important;
+            }
+
+            #preloader {
+                position: fixed;
+                inset: 0;
+                background: #ffffff;
+                z-index: 99999;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            #preloader svg {
+                width: 200px;
+                height: auto;
+            }
+        </style>
+
+        <!-- Main CSS -->
+        <link rel="preload" href="/css/main.css?v=dev" as="style" />
+        <link rel="stylesheet" href="/css/main.css?v=dev" media="print" onload="this.media = 'all'" />
+
+        <link rel="shortcut icon" href="/assets/ahy-logo.webp" type="image/webp" />
+    </head>
+
+    <body class="home-page">
+        <div data-component="preloader"></div>
+        <div data-component="header"></div>
+
+        <!-- Background -->
+        <div class="gradient-blobs">
+            <video class="blobs-video" autoplay muted loop playsinline preload="none" loading="lazy">
+                <source src="/assets/video/background-video.mp4" type="video/mp4" />
+                <track kind="captions" srclang="en" label="English" />
+            </video>
+
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+            <div class="blob blob-4"></div>
+            <div class="blob blob-5"></div>
+        </div>
+
+        <div id="smooth-wrapper">
+            <div id="smooth-content">
+                <main>
+                    <div data-component="hero"></div>
+                    <div data-component="aboutUs"></div>
+                    <div data-component="philosophy"></div>
+                    <div data-component="techStack"></div>
+                    <div data-component="marqueeReveal"></div>
+                    <div data-component="whatWeDo"></div>
+                    <div data-component="featured-work"></div>
+                    <div data-component="diveInWork"></div>
+                    <div data-component="testimonial"></div>
+                    <div data-component="preFooter"></div>
+                </main>
+
+                <div data-component="footer"></div>
+            </div>
+        </div>
+
+        <div data-component="rotatingBadge"></div>
+
+        <!-- GSAP (Local Single Source) -->
+        <script defer src="/js/gsap.min.js?v=dev"></script>
+        <script defer src="/js/ScrollSmoother.min.js?v=dev"></script>
+        <script defer src="/js/ScrollTrigger.min.js?v=dev"></script>
+        <script defer src="/js/MotionPath.min.js?v=dev"></script>
+        <script defer src="/js/circletype.min.js?v=dev"></script>
+        <script defer src="/js/SplitText.min.js?v=dev"></script>
+        <script defer src="/js/ScrollToPlugin.min.js?v=dev"></script>
+        <script defer src="/js/ScrambleTextPlugin.min.js?v=dev"></script>
+        <script defer src="/js/cookieConsent.js?v=dev"></script>
+
+        <!-- Component Loader -->
+        <script defer src="/js/componentLoaderTest.js"></script>
+        <!-- <script defer src="/js/cachingSolution.js"></script> -->
+
+        <!-- Main App -->
+        <script defer type="module" src="/js/main.js?v=dev"></script>
+
+        <!-- Service Worker Registration for Caching -->
+        <script>
+            if ("serviceWorker" in navigator) {
+                window.addEventListener("load", () => {
+                    navigator.serviceWorker
+                        .register("/sw.js")
+                        .then((registration) => {
+                            console.log("ServiceWorker registration successful with scope: ", registration.scope);
+                        })
+                        .catch((err) => {
+                            console.log("ServiceWorker registration failed: ", err);
+                        });
+                });
+            }
+        </script>
+    </body>
+</html>

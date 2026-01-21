@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Name - Home</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- ScrollSmoother wrapper structure -->
+    <div id="smooth-wrapper">
+        <!-- Keep fixed header outside the transformed smooth-content so position:fixed
+             behaves relative to the viewport (fixes gap caused by ScrollSmoother transforms) -->
+        <div data-component="header"></div>
+        <div id="smooth-content">
+            <main>
+                <div data-component="test"></div>
+            </main>
+            <!-- <div data-component="footer"></div> -->
+        </div>
+    </div>
+
+    <!-- GSAP Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    
+
+    <!-- ScrollSmoother requires ScrollTrigger -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/MotionPathPlugin.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/matter-js@0.20.0/build/matter.min.js"></script>
+
+    
+    <script src="js/componentLoader.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

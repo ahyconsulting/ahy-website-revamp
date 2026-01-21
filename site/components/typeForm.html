@@ -1,0 +1,98 @@
+<section class="contact-section">
+    <div class="contact-container">
+        <!-- Left side content -->
+        <div class="contact-info">
+            <h2 class="contact-title title" data-splitting>
+                Let’s <span class="word">Connect</span> and <br />Book Your Meeting Now
+            </h2>
+
+
+            <div class="stats">
+                <div class="stat-card">
+                    <h3>100+</h3>
+                    <p>Happy Clients</p>
+                </div>
+                <div class="stat-card">
+                    <h3>19</h3>
+                    <p>Y.O.E</p>
+                </div>
+                <div class="stat-card">
+                    <h3>4.9</h3>
+                    <p>Average Rating</p>
+                </div>
+            </div>
+
+            <div class="testimonial">
+                 <picture>
+                    <!-- Mobile image first (max-width 425px) -->
+                    <source media="(max-width: 425px)" srcset="assets/teams/harpreet-contact-mobile.webp" />
+                    <!-- Desktop image as default -->
+                    <img src="assets/teams/harpreet-contact-desktop.webp" alt="Harpreet Singh" />
+                </picture>
+                <div class="testimonial-text">
+                    <h4>Harpreet Singh</h4>
+                    <p class="company">Ahy Consulting</p>
+                    <p class="quote">As CEO, I believe every great partnership begins with a conversation. Whether you have a question, an idea, or a challenge we’re here to listen and help. Reach out, and let’s build something meaningful together.</p>
+                </div>
+            </div>
+
+            <div class="book-call">
+                <p>Prefer to book a call?</p>
+                <a class="btn-anim" href="https://calendly.com/ahyconsulting/" target="_blank" rel="noopener noreferrer"> Let’s Book A Call </a>
+            </div>
+
+            <div class="contact-two-col">
+                <div class="left">
+                    <p class="label">Reach out to us</p>
+                </div>
+
+                <div class="right">
+                    <p><a href="mailto:info@ahyconsulting.com">info@ahyconsulting.com</a></p>
+                    <p><a href="tel:+919167676599">(+91) 91 6767 65 99</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right side Typeform embed -->
+        <div class="contact-form">
+            <form id="contactForm" onsubmit="event.preventDefault(); onSubmitClick();">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="first_name">First Name</label>
+                        <input type="text" id="first_name" name="first_name" placeholder="Jane" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="last_name">Last Name</label>
+                        <input type="text" id="last_name" name="last_name" placeholder="Smith" required />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" placeholder="(201) 555-0123" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="name@example.com" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="company">Company</label>
+                    <input type="text" id="company" name="company" placeholder="Company" />
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                </div>
+
+                <button class="btn-anim" type="submit">Send Message</button>
+            </form>
+
+            <!-- Invisible reCAPTCHA container -->
+            <div id="recaptcha-container"></div>
+        </div>
+    </div>
+</section>

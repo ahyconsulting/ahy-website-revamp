@@ -1,0 +1,132 @@
+.rotating-badge {
+    position: fixed;
+    right: 35px;
+    bottom: 45px;
+    width: 120px;
+    height: 120px;
+    z-index: 999;
+    pointer-events: none; /* allow clicks only on center */
+}
+
+.rotating-badge__wrap {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: relative;
+    overflow: visible; /* allow circular text to extend outside */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+}
+
+.rotating-badge__progress {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+    pointer-events: none;
+    display: block;
+}
+
+.rotating-badge__progress .progress-bg {
+    opacity: 1;
+}
+.rotating-badge__progress .progress-fg {
+    transform-origin: center center;
+    stroke: var(--primary-theme-color);
+}
+
+/* layering: progress behind text but above other background */
+.rotating-badge__progress {
+    z-index: 0;
+}
+.rotating-badge__text {
+    z-index: 1;
+}
+.rotating-badge__center {
+    z-index: 2;
+}
+
+.rotating-badge__text {
+    position: absolute;
+    width: 240px; /* a bit larger than container so circle fits */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    text-align: center;
+    font-family: var(--ahy-body-font-grandstander);
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    color: floralwhite;
+    pointer-events: none;
+    transform-origin: center center;
+    text-transform: uppercase;
+}
+
+.rotating-badge__center {
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 18px rgba(11, 11, 11, 0.12);
+    pointer-events: auto; /* allow clicking */
+    text-decoration: none;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.rotating-badge__center svg {
+    display: block;
+}
+.rotating-badge__center img,
+.rotating-badge__center svg {
+    display: block;
+    width: 60%;
+    height: 60%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Slightly scale down on small screens */
+@media (max-width: 700px) {
+    .rotating-badge {
+        width: 92px;
+        height: 92px;
+        right: 10px;
+        bottom: 10px;
+    }
+    .rotating-badge__text {
+        width: 220px;
+        font-size: 16px;
+    }
+    .rotating-badge__center {
+        width: 48px;
+        height: 48px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .rotating-badge__text {
+        transition: none !important;
+    }
+}
+@media (max-width: 700px) {
+    .rotating-badge__text {
+        display: none !important;
+    }
+}

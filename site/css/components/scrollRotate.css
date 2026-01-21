@@ -1,0 +1,106 @@
+/* General styles for .scroll-circular-text */
+.scroll-circular-text {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 9999;
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+.scroll-text {
+    position: absolute;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #333;
+    white-space: nowrap;
+    width: 100%;
+    text-align: center;
+    text-shadow: 0 0 1px #fff;
+}
+
+.scroll-arrow {
+    width: 42px;
+    height: 42px;
+    z-index: 2;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    .scroll-circular-text {
+        width: 88px;
+        height: 88px;
+        bottom: 50px;
+        right: 50px;
+    }
+
+    .scroll-arrow {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* For screens with max-width of 768px */
+@media (max-width: 768px) {
+    .scroll-circular-text {
+        width: 80px;
+        height: 80px;
+        bottom: 30px;
+        right: 30px;
+    }
+
+    .scroll-text {
+        font-size: 10px; /* Adjust font size to fit */
+    }
+
+    .scroll-arrow {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* For screens with max-width of 425px */
+@media (max-width: 425px) {
+    .scroll-circular-text {
+        width: 70px;
+        height: 70px;
+        bottom: 25px;
+        right: 25px;
+    }
+
+    .scroll-text {
+        font-size: 8px;
+    }
+
+    .scroll-arrow {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+/* For screens with max-width of 375px */
+@media (max-width: 375px) {
+    .scroll-circular-text {
+        width: 60px;
+        height: 60px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .scroll-text {
+        font-size: 6px;
+    }
+
+    .scroll-arrow {
+        width: 28px;
+        height: 28px;
+    }
+}

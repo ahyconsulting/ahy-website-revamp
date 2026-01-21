@@ -1,0 +1,134 @@
+.ditork-section {
+    text-align: center;
+    padding: 0px 20px 4rem 20px;
+    /* background: #f7f7f7; */
+}
+
+.ditork-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #222;
+    font-family: var(--ahy-heading-font-tomorrow);
+}
+
+.ditork-btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 28px;
+    background: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: 0.3s ease;
+    font-family: var(--ahy-body-font-grandstander);
+}
+
+.ditork-btn:hover {
+    background: #444;
+}
+
+.diveInWork-center-btn {
+    --btn-bg: #000000;
+    --btn-text: #ffffff;
+    --btn-padding: 1.4rem 2.2rem;
+    /* set vertical padding to 1.4rem */
+    --btn-radius: 24px;
+    /* decreased border radius */
+
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--btn-bg);
+    color: var(--btn-text);
+    padding: var(--btn-padding);
+    border-radius: var(--btn-radius);
+
+    font-family: var(--ahy-body-font-grandstander);
+    font-size: clamp(1rem, 4vw, 1.8rem);
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    line-height: 1.2;
+
+    cursor: pointer;
+    overflow: hidden;
+    /* Essential for masking the slot text */
+    box-sizing: border-box;
+    box-shadow: 0 2px 8px -1px rgba(39, 94, 254, 0.32);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    /* Ensure minimum width to prevent jitter if text sizes vary drastically */
+    min-width: 220px;
+}
+
+.diveInWork-center-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px -2px var(--primary-color);
+}
+
+/* This wrapper uses Grid to stack the two text states exactly on top of each other */
+.diveInWork-btn-text-wrapper {
+    display: grid;
+    place-items: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 1.45em;
+    /* Slightly larger to prevent clipping for larger fonts */
+    padding-inline: 6px;
+    /* little padding so text not clipped at edges */
+    padding-block: 0.15rem;
+    /* small vertical padding to avoid cropping */
+}
+
+/* --- RESPONSIVE QUERIES --- */
+
+
+@media (max-width: 1440px) {
+    .diveInWork-center-btn {
+        --font-size: 40px;
+        padding: 1.4rem 5rem;
+        font-size: 2.5rem;
+        line-height: 40px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .diveInWork-center-btn {
+        padding: 1.4rem 3.5rem;
+        font-size: 2rem;
+        width: auto;
+        /* behaves like desktop, not full width */
+        border-radius: var(--btn-radius);
+    }
+}
+
+@media (max-width: 768px) {
+    .diveInWork-center-btn {
+        padding: 1.4rem 2.2rem;
+        font-size: 1.25rem;
+        border-radius: var(--btn-radius);
+         line-height: 28px;
+        min-width: 0;
+        width: 80%;
+    }
+      .ditork-title {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .diveInWork-center-btn {
+        font-size: 1rem;
+        border-radius: 80px;
+        padding: 1.4rem 2rem;
+        font-size: 1rem;
+        line-height: 16px;
+        min-width: 0;
+        width: 90%;
+    }
+}

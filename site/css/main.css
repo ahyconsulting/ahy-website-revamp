@@ -1,0 +1,401 @@
+/* ScrollSmoother Required Styles */
+@import url("../fonts.css");
+/* Add to your main.css */
+/* Replace the previous * selector with more specific ones */
+html, body {
+    touch-action: pan-y pinch-zoom !important;
+    overscroll-behavior-y: auto !important; /* Allow pull-to-refresh */
+}
+
+#smooth-wrapper, #smooth-content {
+    touch-action: pan-y pinch-zoom !important;
+    overscroll-behavior-y: contain; /* Prevent double-bounce but allow refresh */
+}
+
+/* For GSAP ScrollSmoother */
+.scrollsmoother-container {
+    touch-action: pan-y pinch-zoom !important;
+}
+
+/* Only restrict touch-action on specific interactive elements that need it */
+button, a, input, textarea, select {
+    touch-action: manipulation;
+}
+
+
+
+body {
+    font-family: "Tusker", sans-serif;
+}
+
+#smooth-wrapper {
+    overflow: hidden;
+}
+
+#smooth-content {
+    overflow: visible;
+    width: 100%;
+    /* ensure no unintended spacing above fixed header placed outside this element */
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/* Firefox */
+* {
+    scrollbar-width: 10px;
+    scrollbar-color: #ec1865 rgb(9, 9, 9);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 15px;
+}
+
+*::-webkit-scrollbar-track {
+    background: rgb(0, 0, 0);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #ec1865;
+    border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background-color: #ff1a73;
+}
+
+/* Existing styles below... */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Prevent overscroll glow and rubber-banding side effects */
+html,
+body {
+    overscroll-behavior-y: none;
+    touch-action: pan-y;
+}
+p:not(.anti-text-selection)::selection,
+h1:not(.anti-text-selection)::selection,
+h2:not(.anti-text-selection)::selection,
+h3:not(.anti-text-selection)::selection,
+h4:not(.anti-text-selection)::selection,
+h5:not(.anti-text-selection)::selection,
+h6:not(.anti-text-selection)::selection,
+span:not(.anti-text-selection)::selection,
+a:not(.anti-text-selection)::selection,
+li:not(.anti-text-selection)::selection,
+strong:not(.anti-text-selection)::selection,
+em:not(.anti-text-selection)::selection,
+label:not(.anti-text-selection)::selection {
+    background: var(--primary-theme-color);
+    color: white;
+    -webkit-text-fill-color: white;
+    /* Safari */
+}
+
+:root {
+    --primary-color: #1e1e1e;
+    --secondary-color: #764ba2;
+    --primary-theme-color: #ec1965;
+    --text-dark: #333;
+    --text-light: #666;
+    --bg-light: #f8f9fa;
+    /* Font families */
+    --ahy-heading-font-tomorrow: "Tusker", sans-serif;
+    --ahy-body-font-grandstander: "SpaceGrotesk", sans-serif;
+    --text-primary: #ccc;
+    --text-secondary: #fff;
+    --text-white: #fff;
+    --accent-primary: #ff6b6b;
+    --accent-secondary: #ff80a8;
+    --accent-tertiary: #e2ff40;
+    --accent-quaternary: #ff7043;
+    --accent-quinary: #ff5722;
+    --bg-color: #121212;
+
+    /* Common font weights */
+    --ahy-weight-thin: 100;
+    --ahy-weight-extralight: 200;
+    --ahy-weight-light: 300;
+    --ahy-weight-regular: 400;
+    --ahy-weight-medium: 500;
+    --ahy-weight-semibold: 600;
+    --ahy-weight-bold: 700;
+    --ahy-weight-extrabold: 800;
+}
+
+body {
+    line-height: 1.6;
+    color: var(--primary-color);
+    background-color: #e3e3db;
+    overflow-x: hidden;
+}
+
+main {
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+section {
+    padding: 4rem 0;
+}
+
+/* Global Gradient Blobs (fixed behind all sections) */
+.gradient-blobs {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    /* sits behind page content which follows in DOM */
+    pointer-events: none;
+    overflow: hidden;
+}
+
+/* Utility: brush highlight ('pink' variant)
+   Usage: Add class `brush-pink` to inline text elements (span, a, strong)
+   Example: <span class="brush-pink">Highlighted text</span>
+   Notes:
+     - Background image path: /assets/brush_pink.png
+     - It uses a pseudo-element (::before) and respects the parent font-size using em units.
+     - You can tweak the brush size with `--brush-scale` (default 1) and vertical offset with `--brush-offset`.
+*/
+.brush-pink {
+    position: relative;
+    display: inline-block;
+    /* shrink to text width */
+    vertical-align: baseline;
+    z-index: 0;
+    /* text sits above pseudo-element */
+    color: white;
+}
+
+.brush-pink::before {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    left: -0.12em;
+    /* small negative gap so brush overhangs text a little */
+    right: -0.12em;
+    /* same as left */
+    top: 50%;
+    transform: translateY(calc(-50% + var(--brush-offset, 0em)));
+    /* Support multi-line text: ensure pseudo-element covers single-line default or entire element height */
+    height: max(calc(1.2em * var(--brush-scale, 1)), 100%);
+    background-image: url("/assets/brush_pink_new.webp");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% auto;
+    /* fit horizontally and keep aspect */
+    z-index: -1;
+    display: block;
+}
+
+/* Variants: smaller / larger brush sizes if needed */
+.brush-pink--sm {
+    --brush-scale: 0.85;
+}
+
+.brush-pink--lg {
+    --brush-scale: 1.25;
+}
+
+.gradient-blobs .blobs-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.28;
+    /* subtle backdrop so content remains readable */
+}
+
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.5;
+    will-change: transform;
+}
+
+.blob-1 {
+    width: 500px;
+    height: 500px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    top: -10%;
+    left: -5%;
+}
+
+.blob-2 {
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    top: 40%;
+    right: -10%;
+}
+
+.blob-3 {
+    width: 550px;
+    height: 550px;
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    bottom: -15%;
+    left: 25%;
+}
+
+.blob-4 {
+    width: 350px;
+    height: 350px;
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    top: 15%;
+    left: 45%;
+}
+
+.blob-5 {
+    width: 450px;
+    height: 450px;
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    bottom: 5%;
+    right: 15%;
+}
+
+.btn-anim {
+    --background: #000;
+    --text: #fff;
+    --font-size: 30px;
+    --duration: 0.44s;
+    --move-hover: -4px;
+    --shadow: 0 2px 8px -1px rgba(39, 94, 254, 0.32);
+    --shadow-hover: 0 4px 20px -2px rgba(39, 94, 254, 0.5);
+    --font-shadow: var(--font-size);
+    --y: 0;
+    --m: 0;
+
+    padding: 1.8rem 3.1rem;
+    font-family: var(--ahy-body-font-grandstander);
+    font-weight: 800;
+    line-height: var(--font-size);
+    border-radius: 24px;
+    display: inline-block;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    font-size: var(--font-size);
+    letter-spacing: 0.5px;
+    background: var(--background);
+    color: var(--text);
+    box-shadow: var(--shadow);
+    transform: translateY(var(--y));
+    transition: transform var(--duration) ease, box-shadow var(--duration) ease;
+    cursor: pointer;
+}
+
+.btn-anim div {
+    display: flex;
+    overflow: hidden;
+    text-shadow: 0 var(--font-shadow) 0 var(--text);
+}
+
+.btn-anim span {
+    display: block;
+    backface-visibility: hidden;
+    font-style: normal;
+    transition: transform var(--duration) ease;
+    transform: translateY(var(--m));
+}
+
+.btn-anim:hover {
+    --y: var(--move-hover);
+    --shadow: var(--shadow-hover);
+    --m: calc(var(--font-size) * -1);
+}
+
+/* Delay cascade */
+.btn-anim span:nth-child(1) {
+    transition-delay: 0.05s;
+}
+
+.btn-anim span:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.btn-anim span:nth-child(3) {
+    transition-delay: 0.15s;
+}
+
+.btn-anim span:nth-child(4) {
+    transition-delay: 0.2s;
+}
+
+.btn-anim span:nth-child(5) {
+    transition-delay: 0.25s;
+}
+
+.btn-anim span:nth-child(6) {
+    transition-delay: 0.3s;
+}
+
+.btn-anim span:nth-child(7) {
+    transition-delay: 0.35s;
+}
+
+.btn-anim span:nth-child(8) {
+    transition-delay: 0.4s;
+}
+
+.btn-anim span:nth-child(9) {
+    transition-delay: 0.45s;
+}
+
+.btn-anim span:nth-child(10) {
+    transition-delay: 0.5s;
+}
+
+.btn-anim span:nth-child(11) {
+    transition-delay: 0.55s;
+}
+
+.btn-anim span:nth-child(12) {
+    transition-delay: 0.6s;
+}
+
+.btn-anim span:nth-child(13) {
+    transition-delay: 0.65s;
+}
+
+.btn-anim span:nth-child(14) {
+    transition-delay: 0.7s;
+}
+
+.btn-anim span:nth-child(15) {
+    transition-delay: 0.75s;
+}
+
+.btn-anim span:nth-child(16) {
+    transition-delay: 0.8s;
+}
+
+.btn-anim span:nth-child(17) {
+    transition-delay: 0.85s;
+}
+
+.btn-anim span:nth-child(18) {
+    transition-delay: 0.9s;
+}
+
+.btn-anim span:nth-child(19) {
+    transition-delay: 0.95s;
+}
+
+.btn-anim span:nth-child(20) {
+    transition-delay: 1s;
+}

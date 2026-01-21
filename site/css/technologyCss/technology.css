@@ -1,0 +1,55 @@
+.panel-title {
+    text-transform: capitalize;
+}
+
+.panel-text {
+    font-weight: var(--ahy-weight-semibold) !important;
+}
+.adv-card {
+    padding: 0.7rem 1.5rem !important;
+}
+@media (max-width: 425px) {
+    .first-panel-width {
+        max-width: 100% !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .panel-text {
+        font-size: 1.2rem !important;
+    }
+
+    .panel-title {
+        line-height: 2 !important;
+    }
+
+    .adv-card h3.panel-subtitle {
+        font-size: 1.5rem !important;
+    }
+
+    .panel-text {
+        font-weight: var(--ahy-weight-light) !important;
+    }
+    .adv-card {
+        padding: 1rem 0.8rem !important;
+    }
+}
+
+
+.panel-subtitle-uppercase{
+    text-transform: uppercase;
+    font-family: var(--ahy-body-font-grandstander) !important;
+     font-weight: var(--ahy-weight-light) !important;
+}
+
+
+h1 {
+    font-family: var(--ahy-heading-font-tomorrow);
+    font-weight: var(--ahy-weight-bold);
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    line-height: 1.1;
+}
+
+section h1 {
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+}

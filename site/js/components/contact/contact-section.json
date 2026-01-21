@@ -1,0 +1,50 @@
+{
+    "hyva": {
+        "title": "Supercharge Your <br><span>Hyvä Store</span>",
+        "subtitle": "Ready to elevate your storefront?",
+        "button": "Contact Us",
+        "bgText": "HYVÄ"
+    },
+    "react": {
+        "title": "Build a Powerful <br><span>React Application</span>",
+        "subtitle": "Let’s build something exceptional.",
+        "button": "Contact Us",
+        "bgText": "REACT"
+    },
+    "reactnative": {
+        "title": "Build a Powerful <br><span>React Native App</span>",
+        "subtitle": "Your idea. Our engineering.",
+        "button": "Contact Us",
+        "bgText": "NATIVE"
+    },
+    "shopify": {
+        "title": "Scale Your <br><span>Shopify Store</span><br> with Confidence",
+        "subtitle": "Let’s create a commerce experience that performs.",
+        "button": "Contact Us",
+        "bgText": "SHOPIFY"
+    },
+    "about": {
+        "title": "Get In Touch",
+        "subtitle": "We'd love to hear from you. Whether you have a question about our services, pricing, or anything else, our team is ready to answer all your questions.",
+        "button": "Send Message",
+        "bgText": "CONTACT"
+    },
+     "services": {
+        "title": "Get In Touch",
+        "subtitle": "We'd love to hear from you. Whether you have a question about our services, pricing, or anything else, our team is ready to answer all your questions.",
+        "button": "Send Message",
+        "bgText": "CONTACT"
+    },
+     "career": {
+        "title": "Get In Touch",
+        "subtitle": "We'd love to hear from you. Whether you have a question about our services, pricing, or anything else, our team is ready to answer all your questions.",
+        "button": "Send Message",
+        "bgText": "CONTACT"
+    },
+     "team": {
+        "title": "Get In Touch",
+        "subtitle": "We'd love to hear from you. Whether you have a question about our services, pricing, or anything else, our team is ready to answer all your questions.",
+        "button": "Send Message",
+        "bgText": "CONTACT"
+    }
+}

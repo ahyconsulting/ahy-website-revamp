@@ -1,0 +1,42 @@
+{
+    "hyva": {
+        "title": "Hyvä",
+        "subtitle": "Experts in building fast, modern, and scalable Magento 2 storefronts using the Hyvä theme for high-performance e-commerce experiences."
+    },
+    "react": {
+        "title": "React Js",
+        "subtitle": "Experts in building fast, modern, and scalable web apps using ReactJS for high-performance user experiences."
+    },
+    "reactnative": {
+        "title": "React <br> Native",
+        "subtitle": "Experts in building high-performance, scalable, and visually polished mobile applications using React Native for seamless cross-platform experiences."
+    },
+    "shopify": {
+        "title": "Shopify",
+        "subtitle": "Specialists in creating fast, modern, and scalable Shopify stores for high-performing e-commerce experiences."
+    },
+    "researchLab": {
+         "title": "How We Think",
+        "subtitle": "We study what's coming, question what's common, and design systems that endure change, scale, and intelligence."
+    },
+    "career": {
+        "title": "Career",
+        "subtitle": "Join our team of thinkers and creators. Together, we craft experiences that inspire audiences. And shape ideas that transform brands."
+    },
+    "services": {
+        "title": "Services",
+         "subtitle": "We design and engineer scalable digital systems for growing businesses, reducing complexity, enabling change, and turning strategy into execution."
+    },
+    "team": {
+        "title": "Team",
+        "subtitle": "A team where creativity meets excellence. Where ideas turn into meaningful experiences. And innovation drives everything we do."
+    },
+    "about": {
+        "title": "About",
+        "subtitle": "We design and build powerful eCommerce platforms and digital solutions that help businesses grow. By combining strategic thinking, creative design."
+    },
+    "contact": {
+        "title": "Contact",
+        "subtitle": "We design and build powerful eCommerce platforms and digital solutions that help businesses grow by combining strategic thinking and creative design."
+    }
+}

@@ -1,0 +1,233 @@
+/* MAIN WRAPPER – CENTER EVERYTHING */
+.faq-accordion-container {
+    min-height: 70vh;
+    padding: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    gap: 2rem;
+}
+
+/* GRID WRAPPER — CENTERED, BALANCED */
+.faq-accordion-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 3rem;
+    align-items: start;
+    /* vertical alignment of both columns */
+    justify-content: center;
+    /* center the grid inside container */
+}
+
+/* LEFT NAV */
+.faq-accordion-nav {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* HOVER BACKGROUND */
+.faq-hover-background {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.faq-hover-background svg {
+    width: 100%;
+    height: 100%;
+}
+
+.faq-hover-background path {
+    fill: url(#magentaGradient);
+}
+
+/* NAV ITEMS */
+.faq-accordion-item {
+    border: 1px solid #333;
+    background: rgba(255, 255, 255, 0.02);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+.faq-accordion-item:not(:last-child) {
+    border-bottom: none;
+}
+
+.faq-accordion-item:hover {
+    border-color: #555;
+}
+
+.faq-accordion-item.active {
+    border-color: #777;
+    /* background: rgba(255, 255, 255, 0.06); */
+}
+
+.faq-accordion-title {
+    padding: 1.5rem 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.faq-accordion-title span {
+    max-width: 90%;
+    white-space: normal;
+    word-break: break-word;
+    line-height: 1.4;
+    font-family: var(--ahy-body-font-grandstander);
+}
+
+/* ICON */
+.faq-accordion-icon {
+    width: 18px;
+    height: 18px;
+    position: relative;
+}
+
+.faq-accordion-icon::before,
+.faq-accordion-icon::after {
+    content: "";
+    position: absolute;
+    background: #ffffff;
+    border-radius: 1px;
+}
+
+.faq-accordion-icon::before {
+    width: 100%;
+    height: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.faq-accordion-icon::after {
+    height: 100%;
+    width: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.3s ease;
+}
+
+.faq-accordion-item.active .faq-accordion-icon::after {
+    opacity: 0;
+}
+
+/* RIGHT SECTION — FIXED: NO ABSOLUTE, ALLOWS FLEX HEIGHT */
+.faq-accordion-content-container {
+    width: 100%;
+    position: relative;
+}
+
+/* CONTENT — FIXED: NORMAL FLOW, AUTO HEIGHT */
+.faq-accordion-content {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.35s ease;
+}
+
+.faq-accordion-content.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* TEXT STYLES */
+.faq-content-title {
+    font-size: 2.6rem;
+    line-height: 1.3;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-family: var(--ahy-heading-font-tomorrow);
+}
+
+.faq-content-text {
+    font-size: 1.15rem;
+    color: #dcdcdc;
+    max-width: 95%;
+    line-height: 1.75;
+    font-family: var(--ahy-body-font-grandstander);
+}
+
+.faq-accordion-item.active {
+    background-color: #F34280 !important;
+}
+
+.faq-accordion-item.paused-active {
+    background-color: transparent !important;
+}
+
+/* RESPONSIVE FIXES */
+@media (max-width: 992px) {
+    .faq-accordion-wrapper {
+        grid-template-columns: 280px 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .faq-accordion-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .faq-accordion-container {
+        padding: 4rem 2rem;
+    }
+
+    .faq-content-title {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .faq-accordion-title {
+        padding: 1rem;
+        font-size: 0.8rem;
+    }
+
+    .faq-content-title {
+        font-size: 1.8rem;
+    }
+
+    .faq-accordion-title span {
+        max-width: 85%;
+    }
+
+    .faq-section-title {
+        font-size: 1.7rem;
+    }
+}
+
+.faq-section-title {
+    font-family: var(--ahy-heading-font-tomorrow);
+    text-align: center;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: var(--ahy-weight-extrabold);
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 3rem;
+    /* Space between title and accordion */
+    line-height: 1.2;
+    letter-spacing: 2px;
+}
+
+.faq-accordion-item.active {
+    background-color: #C91D5E !important; /* Darker pink - passes WCAG AA */
+}

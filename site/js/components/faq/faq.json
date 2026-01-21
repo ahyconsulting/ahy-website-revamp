@@ -1,0 +1,161 @@
+{
+    "career": [
+        {
+            "title": "Is my website going to be SEO friendly?",
+            "contentTitle": "Is my website going to be SEO friendly?",
+            "content": "<p>100%. We strongly believe that a website should be SEO friendly, there is no point of a beautiful website that can't be marketed. We follow and implement best development practices to ensure the website is visible online.</p>"
+        },
+        {
+            "title": "How much time does it take to build an eCommerce Website? ",
+            "contentTitle": "How much time does it take to build an eCommerce Website?  ",
+            "content": "<p>You can start selling online in 2 days, on your own website. Obviously, it will come along with very basic features. For something bespoke and custom, it may take somewhere between 6-10 weeks.</p>"
+        },
+        {
+            "title": "Can I get a website developed for free?",
+            "contentTitle": "Can I get a website developed for free?",
+            "content": "<p>While free website builders exist, we recommend professional development to ensure scalability, security, and reliability for your business. Investing in a proper solution saves time and cost in the long run.</p>"
+        },
+        {
+            "title": "What skills are required to start a career in web development?",
+            "contentTitle": "What skills are required to start a career in web development?",
+            "content": "<p>Essential skills include HTML, CSS, JavaScript, and familiarity with CMS or frameworks like WordPress or Magento. Problem-solving, adaptability, and continuous learning are key to a successful career in development.</p>"
+        }
+    ],
+    "contact": [
+        {
+            "title": "Is Magento better than WooCommerce?",
+            "contentTitle": "Is Magento better than WooCommerce?",
+            "content": "<p>Magento and WooCommerce are two entirely different systems for one purpose. In some cases, Magento is the right fit, and in other cases, WooCommerce is. Usually, Magento is recommended for enterprise solutions and WooCommerce for small to midscale stores.</p>"
+        },
+        {
+            "title": "How much time does it take to build an eCommerce Website?",
+            "contentTitle": "How much time does it take to build an eCommerce Website?",
+            "content": "<p>You can start selling online in 2 days, on your own website. Obviously, it will come along with very basic features. For something bespoke and custom, it may take somewhere between 6-10 weeks.</p>"
+        },
+        {
+            "title": "How to get a website developed for free?",
+            "contentTitle": "How to get a website developed for free?",
+            "content": "<p>Absolutely. You just need to learn HTML, CSS, Javascript, jQuery, PHP, a content management system like WordPress to develop a basic website. But we would recommend you focus on your business, and let us take care of your technology.</p>"
+        },
+        {
+            "title": "How can I bring my business online? How much time will it take?",
+            "contentTitle": "How can I bring my business online? How much time will it take?",
+            "content": "<p>You need a reliable advisor, who can guide you in bringing your business online. Someone who has helped many other businesses to get online. A very simple setup can take 1 week and for something more complex and custom, it may take a few months.</p>"
+        }
+    ],
+    "hyva": [
+        {
+            "title": "Are Hyvä Themes suitable for all types of eCommerce businesses?",
+            "contentTitle": "Are Hyvä Themes suitable for all types of eCommerce businesses?",
+            "content": "<p>Hyvä Themes are versatile and can be adapted for various types of eCommerce businesses, from small startups to large enterprises. The themes are especially beneficial for businesses looking for a bespoke, high-performance, scalable, and user-friendly online presence.</p>"
+        },
+        {
+            "title": "What makes Hyvä Themes different from other Magento themes?",
+            "contentTitle": "What makes Hyvä Themes different from other Magento themes?",
+            "content": "<p>Hyvä Themes stand out due to their minimalistic approach, focusing on performance and simplicity. They use less JavaScript and fewer dependencies compared to other themes, resulting in faster load times and a more streamlined development process.</p>"
+        },
+        {
+            "title": "How does Hyvä impact website loading speed?",
+            "contentTitle": "How does Hyvä impact website loading speed?",
+            "content": "<p>Hyvä significantly enhances website loading speed by employing a leaner approach to front-end design, reducing the amount of code and external libraries needed. This leads to quicker page rendering and a more responsive user experience.</p>"
+        },
+        {
+            "title": "Is Hyvä compatible with existing Magento extensions?",
+            "contentTitle": "Is Hyvä compatible with existing Magento extensions?",
+            "content": "<p>Hyvä is designed to be compatible with many Magento extensions. However, since it uses a different approach for front-end design, some extensions may require additional integration work. It's recommended to check compatibility with specific extensions beforehand.</p>"
+        },
+        {
+            "title": "Can I customize my site's design with Hyvä?",
+            "contentTitle": "Can I customize my site's design with Hyvä?",
+            "content": "<p>Yes, Hyvä offers extensive customization capabilities. It uses Tailwind CSS, which allows for a high degree of flexibility in designing unique and responsive eCommerce websites.</p>"
+        }
+    ],
+    "services": [
+        {
+            "title": "Who works at Ahy?",
+            "contentTitle": "Who works at Ahy?",
+            "content": "<p>Our team consists of developers, designers, and strategists...</p>"
+        },
+        {
+            "title": "Our Mission",
+            "contentTitle": "Our Mission",
+            "content": "<p>We aim to deliver scalable solutions...</p>"
+        }
+    ],
+    "shopify": [
+        {
+            "title": "Is Magento better than WooCommerce?",
+            "contentTitle": "Is Magento better than WooCommerce?",
+            "content": "<p>Magento and WooCommerce are two entirely different systems for one purpose. In some cases, Magento is the right fit, and in other cases, WooCommerce is. Usually, Magento is recommended for enterprise solutions and WooCommerce for small to midscale stores.</p>"
+        },
+        {
+            "title": "How much time does it take to build an eCommerce Website?",
+            "contentTitle": "How much time does it take to build an eCommerce Website?",
+            "content": "<p>You can start selling online in 2 days, on your own website. Obviously, it will come along with very basic features. For something bespoke and custom, it may take somewhere between 6-10 weeks.</p>"
+        },
+        {
+            "title": "How to get a website developed for free?",
+            "contentTitle": "How to get a website developed for free?",
+            "content": "<p>Absolutely. You just need to learn HTML, CSS, Javascript, jQuery, PHP, a content management system like WordPress to develop a basic website. But we would recommend you focus on your business, and let us take care of your technology.</p>"
+        },
+        {
+            "title": "How can I bring my business online? How much time will it take?",
+            "contentTitle": "How can I bring my business online? How much time will it take?",
+            "content": "<p>You need a reliable advisor, who can guide you in bringing your business online. Someone who has helped many other businesses to get online. A very simple setup can take 1 week and for something more complex and custom, it may take a few months.</p>"
+        }
+    ],
+    "react": [
+        {
+            "title": "How much time does it take to build an eCommerce Website?",
+            "contentTitle": "How much time does it take to build an eCommerce Website?",
+            "content": "<p>You can start selling online in 2 days, on your own website. Obviously, it will come along with very basic features. For something bespoke and custom, it may take somewhere between 6-10 weeks.</p>"
+        },
+        {
+            "title": "How to get a website developed for free?",
+            "contentTitle": "How to get a website developed for free?",
+            "content": "<p>Absolutely. You just need to learn HTML, CSS, Javascript, jQuery, PHP, a content management system like WordPress to develop a basic website. But we would recommend you focus on your business, and let us take care of your technology.</p>"
+        },
+        {
+            "title": "How can I bring my business online? How much time will it take?",
+            "contentTitle": "How can I bring my business online? How much time will it take?",
+            "content": "<p>You need a reliable advisor, who can guide you in bringing your business online. Someone who has helped many other businesses to get online. A very simple setup can take 1 week and for something more complex and custom, it may take a few months.</p>"
+        },
+        {
+            "title": "What if I do not like the design?",
+            "contentTitle": "What if I do not like the design?",
+            "content": "<p>Our design process aims to avoid the situation like this. But, still we come to a point where you are not pleased with the designs, it is completely fine. We will patiently listen to what exactly is not aligning with your expectations and we find the way.</p>"
+        },
+        {
+            "title": "Is my website going to be SEO friendly?",
+            "contentTitle": "Is my website going to be SEO friendly?",
+            "content": "<p>100%. We strongly believe that a website should be SEO friendly, there is no point of a beautiful website that can't be marketed. We follow and implement best development practices to ensure the website is visible online.</p>"
+        }
+    ],
+    "reactnative": [
+        {
+            "title": "How much time does it take to build an eCommerce Website?",
+            "contentTitle": "How much time does it take to build an eCommerce Website?",
+            "content": "<p>You can start selling online in 2 days, on your own website. Obviously, it will come along with very basic features. For something bespoke and custom, it may take somewhere between 6-10 weeks.</p>"
+        },
+        {
+            "title": "How to get a website developed for free?",
+            "contentTitle": "How to get a website developed for free?",
+            "content": "<p>Absolutely. You just need to learn HTML, CSS, Javascript, jQuery, PHP, a content management system like WordPress to develop a basic website. But we would recommend you focus on your business, and let us take care of your technology.</p>"
+        },
+        {
+            "title": "How can I bring my business online? How much time will it take?",
+            "contentTitle": "How can I bring my business online? How much time will it take?",
+            "content": "<p>You need a reliable advisor, who can guide you in bringing your business online. Someone who has helped many other businesses to get online. A very simple setup can take 1 week and for something more complex and custom, it may take a few months.</p>"
+        },
+        {
+            "title": "What if I do not like the design?",
+            "contentTitle": "What if I do not like the design?",
+            "content": "<p>Our design process aims to avoid the situation like this. But, still we come to a point where you are not pleased with the designs, it is completely fine. We will patiently listen to what exactly is not aligning with your expectations and we find the way.</p>"
+        },
+        {
+            "title": "Is my website going to be SEO friendly?",
+            "contentTitle": "Is my website going to be SEO friendly?",
+            "content": "<p>100%. We strongly believe that a website should be SEO friendly, there is no point of a beautiful website that can't be marketed. We follow and implement best development practices to ensure the website is visible online.</p>"
+        }
+    ]
+}

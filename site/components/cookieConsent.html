@@ -1,0 +1,151 @@
+<!-- Cookie Consent Banner -->
+<div class="cookie-consent-banner" id="cookieConsent">
+    <div class="cookie-consent-content">
+        <div class="cookie-consent-text">
+            <h3>AhyConsulting.com Cookies!</h3>
+            <p>
+                Our website by default only uses cookies and similar technology [hereinafter "Cookies"] for basic
+                website functions / settings. If you want to stay with the default settings that we've selected, please
+                click "Manage Preferences" and "Save Settings". You may also change the default settings and allow
+                cookies in the Manage Preferences section as per your choice. By clicking "Accept All" you allow all the
+                cookies
+                <a href="#" id="managePrefLink">Manage Preferences</a>
+            </p>
+        </div>
+
+        <div class="cookie-consent-buttons">
+            <button class="cookie-btn cookie-btn-reject" id="rejectAllBtn">
+                Reject all
+            </button>
+            <button class="cookie-btn cookie-btn-accept" id="acceptAllBtn">
+                Accept all
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Cookie Preferences Modal -->
+<div class="cookie-preferences-modal" id="cookiePreferencesModal">
+    <div class="cookie-modal-overlay"></div>
+
+    <div class="cookie-modal-content">
+        <!-- Header -->
+        <div class="cookie-modal-header">
+            <h2>Cookie preferences</h2>
+            <button class="cookie-modal-close" id="closeModalBtn" aria-label="Close">
+                <img src="https://img.icons8.com/ios-glyphs/30/ffffff/macos-close.png" alt="Close" />
+            </button>
+        </div>
+
+        <!-- Body -->
+        <div class="cookie-modal-body">
+            <div class="cookie-usage-section">
+                <h3>
+                    <img src="https://img.icons8.com/ios-glyphs/30/ffffff/info.png" width="20" height="20" alt=""
+                        aria-hidden="true" />
+                    Cookie usage
+                </h3>
+                <p>
+                    We use different types of cookies to optimize your experience.
+                    You may change your preferences at any time.
+                </p>
+            </div>
+
+            <div class="cookie-categories">
+                <!-- Necessary -->
+                <div class="cookie-category expanded">
+                    <div class="cookie-category-header">
+                        <div class="cookie-category-title">
+                            <img class="chevron" src="https://img.icons8.com/ios-glyphs/30/ffffff/chevron-down.png"
+                                alt="" aria-hidden="true" />
+                            <span>Strictly necessary cookies</span>
+                        </div>
+
+                        <div class="cookie-toggle">
+                            <input type="checkbox" checked disabled />
+                            <label class="toggle-label">
+                                <span class="toggle-inner"></span>
+                            </label>
+
+                            <img class="checkmark" src="https://img.icons8.com/ios-glyphs/30/4caf50/checkmark.png"
+                                alt="" aria-hidden="true" />
+                        </div>
+                    </div>
+
+                    <div class="cookie-category-content">
+                        <p>
+                            These cookies are required for the website to function properly.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Analytics -->
+                <div class="cookie-category">
+                    <div class="cookie-category-header">
+                        <div class="cookie-category-title">
+                            <img class="chevron" src="https://img.icons8.com/ios-glyphs/30/ffffff/chevron-down.png"
+                                alt="" aria-hidden="true" />
+                            <span>Performance and Analytics cookies</span>
+                        </div>
+
+                        <div class="cookie-toggle">
+                            <input type="checkbox" id="analyticsCookies" />
+                            <label for="analyticsCookies" class="toggle-label">
+                                <span class="toggle-inner"></span>
+                            </label>
+
+                            <img class="checkmark" src="https://img.icons8.com/ios-glyphs/30/4caf50/checkmark.png"
+                                alt="" aria-hidden="true" />
+                        </div>
+                    </div>
+
+                    <div class="cookie-category-content">
+                        <p>
+                            These cookies allow the website to remember the choices you have made in the past, and used to enhance the performance and functionality of our websites but are nonessential to their use. However, without these cookies, certain functionality (like videos) may become unavailable.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Marketing -->
+                <div class="cookie-category">
+                    <div class="cookie-category-header">
+                        <div class="cookie-category-title">
+                            <img class="chevron" src="https://img.icons8.com/ios-glyphs/30/ffffff/chevron-down.png"
+                                alt="" aria-hidden="true" />
+                            <span>Advertisement and Targeting cookies</span>
+                        </div>
+
+                        <div class="cookie-toggle">
+                            <input type="checkbox" id="marketingCookies" />
+                            <label for="marketingCookies" class="toggle-label">
+                                <span class="toggle-inner"></span>
+                            </label>
+
+                            <img class="checkmark" src="https://img.icons8.com/ios-glyphs/30/4caf50/checkmark.png"
+                                alt="" aria-hidden="true" />
+                        </div>
+                    </div>
+
+                    <div class="cookie-category-content">
+                        <p>
+                            These cookies collect information about how you use the website, which pages you visited and which links you clicked on. All of the data is anonymized and cannot be used to identify you
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="cookie-modal-footer">
+            <button class="cookie-btn cookie-btn-reject" id="modalRejectAllBtn">
+                Reject all
+            </button>
+            <button class="cookie-btn cookie-btn-accept" id="modalAcceptAllBtn">
+                Accept all
+            </button>
+            <button class="cookie-btn cookie-btn-save" id="saveSettingsBtn">
+                Save settings
+            </button>
+        </div>
+    </div>
+</div>

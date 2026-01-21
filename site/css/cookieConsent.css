@@ -1,0 +1,58 @@
+:root {
+    --cc-bg: #fff;
+    --cc-text: #2d4156;
+    --cc-btn-primary-bg: #ff3881 !important;
+    --cc-btn-primary-text: var(--cc-bg);
+    --cc-btn-primary-hover-bg: #EC1865;
+    --cc-btn-secondary-bg: #eaeff2;
+    --cc-btn-secondary-text: var(--cc-text);
+    --cc-btn-secondary-hover-bg: #d8e0e6;
+    --cc-toggle-bg-off: #919ea6;
+    --cc-toggle-bg-on: var(--cc-btn-primary-bg);
+    --cc-toggle-bg-readonly: #d5dee2;
+    --cc-toggle-knob-bg: #fff;
+    --cc-toggle-knob-icon-color: #ecf2fa;
+    --cc-block-text: var(--cc-text);
+    --cc-cookie-category-block-bg: #f0f4f7;
+    --cc-cookie-category-block-bg-hover: #e9eff4;
+    --cc-section-border: #f1f3f5;
+    --cc-cookie-table-border: #e9edf2;
+    --cc-overlay-bg: rgba(4, 6, 8, .85);
+
+}
+
+.c_darkmode {
+    --cc-bg: #181b1d;
+    --cc-text: #d8e5ea;
+    --cc-btn-primary-bg: #ff3881;
+    --cc-btn-primary-text: #000;
+    --cc-btn-primary-hover-bg: #EC1865;
+    --cc-btn-secondary-bg: #33383c;
+    --cc-btn-secondary-text: var(--cc-text);
+    --cc-btn-secondary-hover-bg: #3e454a;
+    --cc-toggle-bg-off: #667481;
+    --cc-toggle-bg-on: var(--cc-btn-primary-bg);
+    --cc-toggle-bg-readonly: #454c54;
+    --cc-toggle-knob-bg: var(--cc-cookie-category-block-bg);
+    --cc-toggle-knob-icon-color: var(--cc-bg);
+    --cc-block-text: #b3bfc5;
+    --cc-cookie-category-block-bg: #23272a;
+    --cc-cookie-category-block-bg-hover: #2b3035;
+    --cc-section-border: #292d31;
+    --cc-cookie-table-border: #2b3035;
+}
+
+#c-inr,#s-inr {
+    font-family: var(--ahy-body-font-grandstander);
+}
+
+#s-cnt {
+    max-height: 100vh;             /* prevent modal from growing larger than viewport */
+    overflow-y: auto;              /* enable vertical scroll */
+    -webkit-overflow-scrolling: touch; /* smooth momentum scrolling on iOS */
+    overscroll-behavior: contain;  /* prevent scroll from leaking to body */
+}
+
+#cc--main {
+    touch-action: pan-y;           /* allow vertical scrolling */
+}

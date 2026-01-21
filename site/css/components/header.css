@@ -1,0 +1,452 @@
+/* Menu Component CSS */
+
+/* Logo */
+.ahy-logo {
+    width: 50px;
+    height: 50px;
+    z-index: 10;
+    position: fixed;
+    top: 2.2rem;
+    left: 2rem;
+}
+
+.ahy-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.ahy-logo:hover img {
+    transform: rotate(360deg);
+}
+
+/* Toggle Button */
+.menu-toggle {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    width: 120px;
+    height: 60px;
+    background-color: #0f0f0f;
+    border-radius: 8em;
+    transition: width 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transform-origin: right;
+    cursor: pointer;
+    z-index: 1002;
+    font-family: var(--ahy-heading-font-tomorrow);
+    display: flex;
+    align-items: center;
+}
+
+.menu-toggle.opened {
+    width: 60px;
+}
+
+.menu-copy {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+    color: white;
+    transition: left 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+
+.menu-copy p {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    margin: 0;
+    line-height: 1;
+}
+
+.menu-toggle.is-hover .menu-copy {
+    left: 20px;
+}
+
+.menu-toggle.opened .menu-copy {
+    opacity: 0;
+}
+
+/* Toggle Icon */
+.menu-toggle-icon {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    clip-path: circle(10% at 50% 50%);
+    background-color: var(--primary-theme-color);
+    border: 1px solid black;
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    z-index: 10;
+    overflow: hidden;
+}
+
+.menu-toggle.is-hover .menu-toggle-icon {
+    clip-path: circle(35% at 50% 50%);
+}
+
+.menu-toggle.opened .menu-toggle-icon {
+    clip-path: circle(50% at 50% 50%);
+    transform: translateY(-50%) scale(1.125);
+}
+
+/* Hamburger */
+.hamburger {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    opacity: 0;
+}
+
+.menu-toggle.is-hover .hamburger,
+.menu-toggle.opened .hamburger {
+    top: 50%;
+    opacity: 1;
+}
+
+.menu-bar {
+    position: absolute;
+    width: 15px;
+    height: 1.5px;
+    background-color: #fff;
+    transition: all 250ms ease-out;
+}
+
+.menu-bar[data-position="top"] {
+    transform: translateY(3px);
+}
+
+.menu-bar[data-position="bottom"] {
+    transform: translateY(-3px);
+}
+
+.menu-toggle.opened .menu-bar[data-position="top"] {
+    transform: translateY(0) rotate(45deg) scaleX(1.05);
+}
+
+.menu-toggle.opened .menu-bar[data-position="bottom"] {
+    transform: translateY(0) rotate(-45deg) scaleX(1.05);
+}
+
+/* Overlay Blocks (BG animation) */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+.overlay.active {
+    pointer-events: auto;
+}
+
+.block {
+    flex: 1;
+    height: 100%;
+    background: #1a1a1a;
+    transform: translateY(-100%);
+    margin-right: -2px;
+}
+
+/* Modern Menu */
+.overlay-menu {
+    pointer-events: none;
+    z-index: 1001;
+}
+
+.overlay-menu.active {
+    pointer-events: auto;
+}
+
+.modern-menu {
+    position: fixed;
+    inset: 0;
+    opacity: 0;
+}
+
+.modern-menu-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+}
+
+.modern-menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.modern-menu-item {
+    font-size: clamp(2rem, 3vw, 3rem);
+    font-family: var(--ahy-heading-font-tomorrow);
+    font-weight: var(--ahy-weight-semibold);
+    text-transform: uppercase;
+    margin: 1rem 0;
+    opacity: 0;
+    transform: translateY(40px);
+    cursor: pointer;
+    transition: 0.3s ease;
+    color: white;
+    position: relative;
+}
+
+.modern-menu-item:hover {
+    transform: translateY(40px) translateX(10px);
+    color: var(--primary-theme-color);
+}
+
+.menu-link {
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+
+.menu-link,
+.menu-link:visited,
+.menu-link:active,
+.menu-link:focus {
+    color: white !important;
+    text-decoration: none !important;
+}
+
+.modern-menu-item:hover .menu-link {
+    color: var(--primary-theme-color) !important;
+}
+
+/* Submenu Styles */
+.has-submenu {
+    display: block;
+    position: relative;
+}
+
+.submenu {
+    overflow: hidden;
+    /* needed for height animation */
+    background: rgba(26, 26, 26, 0.6);
+    backdrop-filter: blur(10px);
+    border-left: 2px solid rgba(236, 25, 101, 0.5);
+    margin: 0 auto;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    width: 80%;
+    max-width: 500px;
+
+    /* GSAP-controlled animation states */
+    height: 0;
+    /* collapsed — removes empty space */
+    opacity: 0;
+    /* invisible until animated */
+    padding: 0;
+    /* avoid spacing when closed */
+    transform: translateY(-8px);
+    pointer-events: none;
+    /* avoid hover glitches when closed */
+
+    list-style: none;
+    z-index: 10;
+}
+
+/* .has-submenu:hover .submenu {
+    max-height: 500px;
+    opacity: 1;
+    padding: 1rem 0;
+} */
+
+/* Grid Layout for Services Submenu */
+.modern-menu-item:has(.submenu .submenu-item:nth-child(3)) .submenu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 0;
+    max-width: 500px;
+}
+
+.submenu-item .submenu-link::after {
+    content: "";
+    width: 18px;
+    height: 18px;
+    margin-left: 8px;
+    display: inline-block;
+
+    /* Apply your SVG */
+    mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M7 7h8.586L5.293 17.293l1.414 1.414L17 8.414V17h2V5H7v2z'/></svg>");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+
+    /* Default color */
+    background-color: #ffffff;
+
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect: arrow turns pink (var(--primary-theme-color)) */
+.submenu-item:hover .submenu-link::after {
+    background-color: var(--primary-theme-color);
+    transform: translateX(4px);
+}
+
+.submenu-item:first-child .submenu-link {
+    white-space: nowrap;
+}
+
+.submenu-item {
+    margin: 0;
+    padding: 0;
+}
+
+.submenu-link {
+    display: block;
+    padding: 0.6rem 2rem;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-size: 0.9rem;
+    font-family: var(--ahy-heading-font-tomorrow);
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+    opacity: 0.8;
+}
+
+.submenu-link:hover {
+    background: rgba(236, 25, 101, 0.15);
+    color: var(--primary-theme-color) !important;
+    padding-left: 2.5rem;
+    opacity: 1;
+}
+
+/* Indicator for items with submenu */
+.has-submenu .menu-link::after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid currentColor;
+    margin-left: 10px;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+/* .has-submenu:hover .menu-link::after {
+    transform: rotate(180deg);
+} */
+.has-submenu.open .menu-link::after {
+    transform: rotate(180deg);
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+    .modern-menu-container {
+        text-align: left;
+        padding-left: 2rem;
+    }
+
+    .modern-menu-item {
+        font-size: 2rem;
+    }
+
+    .modern-menu-item:hover {
+        transform: translateY(40px) translateX(0);
+    }
+
+    /* Remove grid layout on mobile */
+    .modern-menu-item:has(.submenu .submenu-item:nth-child(3)) .submenu {
+        display: block;
+        grid-template-columns: none;
+        grid-template-rows: none;
+        max-width: 100%;
+        width: 90%;
+    }
+
+    .submenu {
+        width: 90%;
+        margin-left: 1rem;
+    }
+
+    .submenu-link {
+        padding: 0.5rem 1rem;
+        font-size: 1.2rem;
+    }
+
+    .submenu-link:hover {
+        padding-left: 1.5rem;
+    }
+
+
+
+
+
+
+
+
+    /* Logo */
+    .ahy-logo {
+        width: 50px;
+        height: 50px;
+        z-index: 10;
+        position: fixed;
+        top: 1.7rem;
+        left: 0.7rem;
+    }
+
+
+    /* Toggle Button */
+    .menu-toggle {
+        position: fixed;
+        top: 1.5rem;
+        right: 0.7rem;
+        width: 120px;
+        height: 60px;
+        background-color: #0f0f0f;
+        border-radius: 8em;
+        transition: width 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+        transform-origin: right;
+        cursor: pointer;
+        z-index: 1002;
+        font-family: var(--ahy-heading-font-tomorrow);
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media (max-width: 1330px) {
+    .menu-toggle-icon {
+        height: 62px;
+    }
+}
+
+
+.menu-link a{
+    text-decoration: none !important;
+    color: white !important;
+
+}
+.modern-menu-item:hover .menu-link a {
+    color: var(--primary-theme-color) !important;
+}

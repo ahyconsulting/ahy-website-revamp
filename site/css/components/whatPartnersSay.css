@@ -1,0 +1,231 @@
+/* whatPartnersSay component styles */
+.whatPartnersSay-section {
+    padding: 10rem 2rem;
+    /* increased top padding to 130px, increase bottom padding for more breathing room on desktop */
+    padding-bottom: calc(110px + 20rem);
+    position: relative;
+    overflow: visible;
+}
+
+.whatPartnersSay-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.whatPartnersSay-title-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.whatPartnersSay-title {
+    font-family: var(--ahy-heading-font-tomorrow);
+    font-size: clamp(30px, 6vw, 60px);
+    font-weight: var(--ahy-weight-semibold) !important;
+    line-height: 1.2;
+    text-align: center;
+    /* max-width: 900px; */
+    text-transform: capitalize;
+    color: var(--primary-color);
+    margin: 0;
+    transform-origin: center center;
+}
+
+.whatPartnersSay-cards-wrap {
+    width: 100%;
+    height: 480px; /* contains the animated area */
+    position: relative;
+}
+
+.whatPartnersSay-cards {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.whatPartnersSay-card {
+    /* increased base size to make images larger while preserving differences */
+    width: 34%;
+    aspect-ratio: 1 / 1; /* enforce square */
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e9f8a9; /* subtle green accent */
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    opacity: 0; /* will be animated in */
+    transform-origin: center center;
+}
+
+.whatPartnersSay-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: inherit;
+}
+
+/* slight parallax/depth: make first and last card a bit larger */
+.whatPartnersSay-card--left:nth-child(1),
+.whatPartnersSay-card--right:nth-child(4) {
+    /* keep larger visual weight for first and last cards */
+    width: 40%;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    z-index: 2;
+}
+
+/* positions */
+.whatPartnersSay-card--left:nth-child(1) {
+    left: 6%;
+    top: -44%;
+}
+.whatPartnersSay-card--right:nth-child(2) {
+    right: 6%;
+    top: -20%;
+}
+.whatPartnersSay-card--left:nth-child(3) {
+    left: 4%;
+    bottom: -40%;
+}
+.whatPartnersSay-card--right:nth-child(4) {
+    right: 8%;
+    bottom: -64%;
+}
+
+/* stacking: top row above bottom row to avoid accidental overlap */
+.whatPartnersSay-card--left:nth-child(1),
+.whatPartnersSay-card--right:nth-child(2) {
+    z-index: 3;
+}
+.whatPartnersSay-card--left:nth-child(3),
+.whatPartnersSay-card--right:nth-child(4) {
+    z-index: 1;
+}
+
+.whatPartnersSay-card-inner {
+    padding: 20px;
+    text-align: center;
+}
+
+.whatPartnersSay-card-number {
+    display: inline-block;
+    font-size: 13px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 6px 8px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+}
+
+.whatPartnersSay-card-title {
+    font-size: clamp(16px, 2.4vw, 26px);
+    margin: 0;
+    padding-top: 6px;
+    color: #101010;
+    font-weight: 700;
+}
+
+/* smaller screens adjustments */
+@media (max-width: 900px) {
+    .whatPartnersSay-cards-wrap {
+        height: 420px;
+    }
+    /* increase tablet sizes proportionally */
+    .whatPartnersSay-card {
+        width: 44%;
+    }
+    .whatPartnersSay-card--left:nth-child(1),
+    .whatPartnersSay-card--right:nth-child(4) {
+        width: 50%;
+    }
+    .whatPartnersSay-card--left:nth-child(1) {
+        left: 4%;
+        top: -34%;
+    }
+    .whatPartnersSay-card--right:nth-child(2) {
+        right: 4%;
+        top: -18%;
+    }
+    .whatPartnersSay-card--left:nth-child(3) {
+        left: 12%;
+        bottom: -32%;
+    }
+    .whatPartnersSay-card--right:nth-child(4) {
+        right: 8%;
+        bottom: -42%;
+    }
+    .whatPartnersSay-card--left:nth-child(1),
+    .whatPartnersSay-card--right:nth-child(2) {
+        z-index: 3;
+    }
+    .whatPartnersSay-card--left:nth-child(3),
+    .whatPartnersSay-card--right:nth-child(4) {
+        z-index: 1;
+    }
+}
+
+@media (max-width: 560px) {
+    .whatPartnersSay-section {
+        padding: 90px 18px;
+        padding-bottom: calc(80px + 1rem);
+    }
+    /* On mobile, allow cards to flow vertically and expand the animated area */
+    .whatPartnersSay-cards-wrap {
+        height: auto;
+        padding-top: 6px;
+    }
+    .whatPartnersSay-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 28px;
+        height: auto;
+        padding: 0 6px 6px;
+    }
+    .whatPartnersSay-card {
+        position: relative;
+        width: 76%; /* larger stacked cards */
+        margin: 0;
+        transform: none; /* let GSAP handle transform via translate/rotation */
+        opacity: 0; /* will animate in via JS */
+        border-radius: 6px;
+    }
+    /* Reset absolute offsets on mobile so cards stack cleanly */
+    .whatPartnersSay-card--left:nth-child(1),
+    .whatPartnersSay-card--right:nth-child(2),
+    .whatPartnersSay-card--left:nth-child(3),
+    .whatPartnersSay-card--right:nth-child(4) {
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+        z-index: auto !important;
+    }
+    /* increase mobile sizes but keep first/last larger */
+    .whatPartnersSay-card {
+        width: 76%;
+    }
+    .whatPartnersSay-card--left:nth-child(1),
+    .whatPartnersSay-card--right:nth-child(4) {
+        width: 86%;
+    }
+    .whatPartnersSay-title {
+        font-size: clamp(26px, 10vw, 42px);
+    }
+}
+
+/* reduced motion fallback */
+@media (prefers-reduced-motion: reduce) {
+    .whatPartnersSay-card,
+    .whatPartnersSay-title {
+        transition: none !important;
+    }
+}

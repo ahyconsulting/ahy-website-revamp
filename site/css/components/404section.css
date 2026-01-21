@@ -1,0 +1,138 @@
+.error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    gap: 3rem;
+}
+.margin-top-btn{
+    margin-top: 1rem;
+}
+.error-code {
+    font-size: 8rem;
+    color: #ec1865; /* 404 color */
+    margin: 0;
+}
+
+.error-message {
+    font-size: 1.5rem;
+    color: #333;
+    font-family: var(--ahy-body-font-grandstander);
+    font-weight: var(--ahy-weight-semibold);
+}
+
+.home-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+    background-color: #ec1865;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-family: var(--ahy-body-font-grandstander);
+    font-weight: var(--ahy-weight-semibold);
+    cursor: pointer;
+}
+
+.home-link:hover {
+    background-color: #b01550;
+}
+
+/* ---------------------------------------------------- */
+/* --- NEW & FIXED BUTTON CSS (SLOT ANIMATION) --- */
+/* ---------------------------------------------------- */
+
+.prefooter-center-btn {
+    --btn-bg: #ec1865;
+    --btn-text: #ffffff;
+    --btn-padding: 1.5rem 3rem;
+    --btn-radius: 50px;
+
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--btn-bg);
+    color: var(--btn-text);
+    padding: var(--btn-padding);
+    border-radius: var(--btn-radius);
+
+    font-family: var(--ahy-body-font-grandstander);
+    font-size: clamp(1rem, 4vw, 1.8rem);
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    line-height: 1;
+
+    cursor: pointer;
+    overflow: hidden; /* Essential for masking the slot text */
+    box-shadow: 0 2px 8px -1px rgba(39, 94, 254, 0.32);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    /* Ensure minimum width to prevent jitter if text sizes vary drastically */
+    min-width: 250px;
+}
+
+.prefooter-center-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px -2px rgba(39, 94, 254, 0.5);
+}
+
+/* This wrapper uses Grid to stack the two text states exactly on top of each other */
+.btn-text-wrapper {
+    display: grid;
+    place-items: center;
+    position: relative;
+    overflow: hidden;
+    height: 1.5em; /* Define height based on font size */
+}
+
+.text-default,
+.text-hover {
+    grid-area: 1 / 1; /* Both occupy the same space */
+    display: flex; /* Flex for char spans */
+    white-space: nowrap;
+    will-change: transform;
+}
+
+/* Individual character styles */
+.char {
+    display: inline-block;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+/* Hover text starts hidden below */
+.text-hover .char {
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+/* Default text starts visible */
+.text-default .char {
+    transform: translateY(0%);
+    opacity: 1;
+}
+
+/* --- RESPONSIVE QUERIES --- */
+@media (max-width: 768px) {
+    .prefooter-heading-style-h2 {
+        font-size: clamp(1.25rem, 6vw, 2.5rem);
+    }
+    .prefooter-center-btn {
+        padding: 1.2rem 2.5rem;
+        min-width: 200px;
+    }
+}
+
+@media (max-width: 425px) {
+    .prefooter-center-btn {
+        padding: 1rem 2rem;
+        min-width: auto;
+        width: 90%;
+    }
+}

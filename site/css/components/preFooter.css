@@ -1,0 +1,755 @@
+.prefooter-section-sub-hero {
+    padding: clamp(60px, 10vw, 120px) clamp(15px, 5vw, 40px);
+    text-align: center;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: var(--primary-color);
+}
+
+.prefooter-appearance-3 .prefooter-heading-style-h2 {
+    padding-bottom: 0.75rem;
+}
+
+/* Parallax Pills Background */
+.prefooter-parallax-pills {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.parallax-pill {
+    position: absolute;
+    border-radius: 100px;
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    z-index: -1;
+    opacity: 0.25;
+}
+
+/* Large pink/magenta pill - left side */
+.pill-1 {
+    width: 28px;
+    height: 90px;
+    background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+    top: 8%;
+    left: 8%;
+    opacity: 0.7;
+}
+
+/* Small cyan pill - top center-left */
+.pill-2 {
+    width: 18px;
+    height: 55px;
+    background: linear-gradient(180deg, #4facfe 0%, #00f2fe 100%);
+    top: 15%;
+    left: 25%;
+    opacity: 0.5;
+    filter: blur(1px);
+}
+
+/* Medium pink pill - top right area */
+.pill-3 {
+    width: 22px;
+    height: 70px;
+    background: linear-gradient(180deg, #f093fb 0%, #f5576c 100%);
+    top: 5%;
+    right: 25%;
+    opacity: 0.6;
+}
+
+/* Large cyan pill - right side */
+.pill-4 {
+    width: 30px;
+    height: 100px;
+    background: linear-gradient(180deg, #43e97b 0%, #38f9d7 100%);
+    top: 25%;
+    right: 8%;
+    opacity: 0.65;
+}
+
+/* Small blurred pill - far left */
+.pill-5 {
+    width: 14px;
+    height: 45px;
+    background: linear-gradient(180deg, #fa709a 0%, #fee140 100%);
+    top: 45%;
+    left: 3%;
+    opacity: 0.4;
+    filter: blur(2px);
+}
+
+/* Medium pill - bottom left */
+.pill-6 {
+    width: 20px;
+    height: 65px;
+    background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+    top: 70%;
+    left: 12%;
+    opacity: 0.55;
+}
+
+/* Tiny accent pill - center right */
+.pill-7 {
+    width: 12px;
+    height: 35px;
+    background: linear-gradient(180deg, #4facfe 0%, #00f2fe 100%);
+    top: 55%;
+    right: 15%;
+    opacity: 0.45;
+    filter: blur(1px);
+}
+
+/* Large pill - bottom right */
+.pill-8 {
+    width: 26px;
+    height: 85px;
+    background: linear-gradient(180deg, #f093fb 0%, #f5576c 100%);
+    top: 75%;
+    right: 6%;
+    opacity: 0.6;
+}
+
+/* Extra small pill - top left area */
+.pill-9 {
+    width: 10px;
+    height: 30px;
+    background: linear-gradient(180deg, #43e97b 0%, #38f9d7 100%);
+    top: 30%;
+    left: 18%;
+    opacity: 0.35;
+    filter: blur(2px);
+}
+
+/* Medium blurred - center area */
+.pill-10 {
+    width: 16px;
+    height: 50px;
+    background: linear-gradient(180deg, #fa709a 0%, #fee140 100%);
+    top: 40%;
+    right: 30%;
+    opacity: 0.4;
+    filter: blur(1.5px);
+}
+
+/* Small pill - bottom center-left */
+.pill-11 {
+    width: 15px;
+    height: 48px;
+    background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+    top: 85%;
+    left: 35%;
+    opacity: 0.5;
+}
+
+/* Tiny pill - far right edge */
+.pill-12 {
+    width: 11px;
+    height: 32px;
+    background: linear-gradient(180deg, #4facfe 0%, #00f2fe 100%);
+    top: 60%;
+    right: 3%;
+    opacity: 0.35;
+    filter: blur(2px);
+}
+
+/* Additional pills for denser parallax effect */
+.pill-13 {
+    width: 24px;
+    height: 75px;
+    background: linear-gradient(180deg, #f093fb 0%, #f5576c 100%);
+    top: 15%;
+    left: 42%;
+    opacity: 0.45;
+}
+
+.pill-14 {
+    width: 16px;
+    height: 52px;
+    background: linear-gradient(180deg, #43e97b 0%, #38f9d7 100%);
+    top: 65%;
+    left: 55%;
+    opacity: 0.4;
+    filter: blur(1px);
+}
+
+.pill-15 {
+    width: 13px;
+    height: 40px;
+    background: linear-gradient(180deg, #fa709a 0%, #fee140 100%);
+    top: 35%;
+    right: 40%;
+    opacity: 0.35;
+    filter: blur(1.5px);
+}
+
+.pill-16 {
+    width: 19px;
+    height: 62px;
+    background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+    top: 80%;
+    left: 65%;
+    opacity: 0.5;
+}
+
+.pill-17 {
+    width: 21px;
+    height: 68px;
+    background: linear-gradient(180deg, #4facfe 0%, #00f2fe 100%);
+    top: 25%;
+    right: 55%;
+    opacity: 0.45;
+}
+
+.pill-18 {
+    width: 15px;
+    height: 48px;
+    background: linear-gradient(180deg, #f093fb 0%, #f5576c 100%);
+    top: 50%;
+    left: 28%;
+    opacity: 0.38;
+    filter: blur(1px);
+}
+
+.pill-19 {
+    width: 17px;
+    height: 55px;
+    background: linear-gradient(180deg, #43e97b 0%, #38f9d7 100%);
+    top: 90%;
+    right: 45%;
+    opacity: 0.42;
+}
+
+.pill-20 {
+    width: 12px;
+    height: 38px;
+    background: linear-gradient(180deg, #fa709a 0%, #fee140 100%);
+    top: 12%;
+    left: 72%;
+    opacity: 0.32;
+    filter: blur(2px);
+}
+
+/* Extra pills at bottom/ends for animation continuity */
+.pill-21 {
+    width: 25px;
+    height: 80px;
+    background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+    top: 95%;
+    left: 8%;
+    opacity: 0.55;
+}
+
+.pill-22 {
+    width: 18px;
+    height: 58px;
+    background: linear-gradient(180deg, #4facfe 0%, #00f2fe 100%);
+    top: 100%;
+    right: 12%;
+    opacity: 0.5;
+}
+
+.pill-23 {
+    width: 22px;
+    height: 72px;
+    background: linear-gradient(180deg, #f093fb 0%, #f5576c 100%);
+    top: 105%;
+    left: 30%;
+    opacity: 0.45;
+    filter: blur(1px);
+}
+
+.pill-24 {
+    width: 14px;
+    height: 45px;
+    background: linear-gradient(180deg, #43e97b 0%, #38f9d7 100%);
+    top: 98%;
+    right: 35%;
+    opacity: 0.4;
+}
+
+.pill-25 {
+    width: 28px;
+    height: 90px;
+    background: linear-gradient(180deg, #fa709a 0%, #fee140 100%);
+    top: 110%;
+    left: 55%;
+    opacity: 0.6;
+}
+
+.pill-26 {
+    width: 16px;
+    height: 52px;
+    background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+    top: 102%;
+    right: 60%;
+    opacity: 0.38;
+    filter: blur(1.5px);
+}
+
+.pill-27 {
+    width: 20px;
+    height: 65px;
+    background: linear-gradient(180deg, #4facfe 0%, #00f2fe 100%);
+    top: 115%;
+    left: 78%;
+    opacity: 0.52;
+}
+
+.pill-28 {
+    width: 13px;
+    height: 42px;
+    background: linear-gradient(180deg, #f093fb 0%, #f5576c 100%);
+    top: 108%;
+    right: 80%;
+    opacity: 0.35;
+    filter: blur(2px);
+}
+
+.pill-29 {
+    width: 24px;
+    height: 78px;
+    background: linear-gradient(180deg, #43e97b 0%, #38f9d7 100%);
+    top: 120%;
+    left: 45%;
+    opacity: 0.48;
+}
+
+.pill-30 {
+    width: 17px;
+    height: 55px;
+    background: linear-gradient(180deg, #fa709a 0%, #fee140 100%);
+    top: 112%;
+    right: 25%;
+    opacity: 0.42;
+    filter: blur(1px);
+}
+
+@media (max-width: 768px) {
+    .parallax-pill {
+        opacity: 0.3;
+    }
+    
+    .pill-1 { width: 18px; height: 60px; }
+    .pill-2 { width: 12px; height: 38px; }
+    .pill-3 { width: 15px; height: 48px; }
+    .pill-4 { width: 20px; height: 65px; }
+    .pill-5 { width: 10px; height: 30px; }
+    .pill-6 { width: 14px; height: 45px; }
+    .pill-7 { width: 8px; height: 24px; }
+    .pill-8 { width: 17px; height: 55px; }
+    .pill-9, .pill-10, .pill-11, .pill-12,
+    .pill-13, .pill-14, .pill-15, .pill-16,
+    .pill-17, .pill-18, .pill-19, .pill-20 { display: none; }
+}
+
+/* Airplane animation container - ABOVE pills */
+.plane-animation-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+    opacity: 0.3;
+}
+
+.plane-animation-container svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.animated-object {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    filter: drop-shadow(0 5px 15px rgba(102, 126, 234, 0.4));
+    will-change: transform, opacity;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+/* Slightly increase paper plane size on mobile so it remains visible */
+@media (max-width: 768px) {
+    .animated-object {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+.paper-plane {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.paper-plane svg {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 3px 10px rgba(102, 126, 234, 0.3));
+}
+
+.trail-line {
+    stroke: rgba(102, 126, 234, 0.5);
+    stroke-width: 2;
+    fill: none;
+    stroke-linecap: round;
+    filter: drop-shadow(0 0 3px rgba(102, 126, 234, 0.6));
+    opacity: 0.6;
+}
+
+/* Prefooter content - ABOVE airplane */
+.prefooter-appearance-1,
+.prefooter-appearance-2,
+.prefooter-appearance-3 {
+    width: 100%;
+    max-width: 1440px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    font-family: var(--ahy-heading-font-tomorrow);
+    font-weight: var(--ahy-weight-bold);
+    padding: 0.5rem;
+    text-transform: capitalize;
+    gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.prefooter-appearance-2 {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.prefooter-appearance-3 {
+    opacity: 0;
+}
+
+.prefooter-heading-style-h2 {
+    text-transform: capitalize;
+    font-size: 4.75rem;
+    line-height: 1.3;
+    font-weight: var(--ahy-weight-extrabold);
+    opacity: 0;
+    transform: translate3d(0, 2rem, 0);
+    margin: 0 0 clamp(0.25rem, 1vw, 0.75rem) 0;
+    will-change: transform, opacity;
+    font-family: var(--ahy-heading-font-tomorrow);
+}
+
+.prefooter-is-fancy {
+    background: var(--primary-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: capitalize;
+}
+.is-fancy {
+    background: var(--primary-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.highlight-blue {
+    color: var(--primary-theme-color) !important;
+    -webkit-text-fill-color: var(--primary-theme-color) !important;
+}
+.is-fancy .highlight-blue,
+.prefooter-is-fancy .highlight-blue {
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: var(--primary-theme-color) !important;
+    color: var(--primary-theme-color) !important;
+}
+
+@media (max-width: 768px) {
+    .prefooter-heading-style-h2 {
+        font-size: clamp(1.2rem, 7vw, 2.5rem);
+    }
+}
+
+/* ---------------------------------------------------- */
+/* --- NEW & FIXED BUTTON CSS (SLOT ANIMATION) --- */
+/* ---------------------------------------------------- */
+
+.prefooter-center-btn {
+    --btn-bg: #000000;
+    --btn-text: #ffffff;
+    --btn-padding: 1.4rem 2.2rem; /* set vertical padding to 1.4rem */
+    --btn-radius: 24px; /* decreased border radius */
+
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--btn-bg);
+    color: var(--btn-text);
+    padding: var(--btn-padding);
+    border-radius: var(--btn-radius);
+
+    font-family: var(--ahy-body-font-grandstander);
+    font-size: clamp(1rem, 4vw, 1.8rem);
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    line-height: 1.2;
+
+    cursor: pointer;
+    overflow: hidden; /* Essential for masking the slot text */
+    box-sizing: border-box;
+    box-shadow: 0 2px 8px -1px rgba(39, 94, 254, 0.32);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    /* Ensure minimum width to prevent jitter if text sizes vary drastically */
+    min-width: 220px;
+}
+
+.prefooter-center-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px -2px var(--primary-color);
+}
+
+/* This wrapper uses Grid to stack the two text states exactly on top of each other */
+.btn-text-wrapper {
+    display: grid;
+    place-items: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 1.45em; /* Slightly larger to prevent clipping for larger fonts */
+    padding-inline: 6px; /* little padding so text not clipped at edges */
+    padding-block: 0.15rem; /* small vertical padding to avoid cropping */
+}
+
+.text-default,
+.text-hover {
+    grid-area: 1 / 1; /* Both occupy the same space */
+    display: flex; /* Flex for char spans */
+    white-space: nowrap;
+    will-change: transform;
+    line-height: 1.2;
+}
+
+/* Individual character styles */
+.char {
+    display: inline-block;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+/* Hover text starts hidden below */
+.text-hover .char {
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+/* Default text starts visible */
+.text-default .char {
+    transform: translateY(0%);
+    opacity: 1;
+}
+
+/* --- RESPONSIVE QUERIES --- */
+@media (max-width: 768px) {
+    .prefooter-center-btn {
+        padding: 1.4rem 2rem; /* keep vertical padding at 1.4rem on mobile */
+        min-width: 0;
+        width: 80%;
+        line-height: 1.2; /* ensure sufficient height */
+    }
+}
+
+@media (max-width: 425px) {
+    .prefooter-center-btn {
+        padding: 1.4rem 2rem; /* set vertical padding to 1.4rem on small screens */
+        min-width: 0;
+        width: 90%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .prefooter-center-btn {
+        --font-size: 16px;
+        padding: 1.4rem 2rem; /* set vertical padding to 1.4rem on small screens */
+        min-width: 0;
+        width: 90%;
+        border-radius: var(--btn-radius);
+    }
+}
+
+@media (max-width: 768px) {
+    .prefooter-center-btn {
+        --font-size: 28px;
+        line-height: 28px;
+    }
+}
+
+@media (max-width: 425px) {
+    .prefooter-center-btn {
+        --font-size: 16px;
+        padding: 1.4rem 2rem;
+        font-size: 1rem;
+        border-radius: 80px;
+        line-height: 16px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .prefooter-heading-style-h2 {
+        font-size: clamp(2.4rem, 5.4vw, 4.5rem);
+    }
+
+    .prefooter-center-btn {
+        --font-size: 40px;
+        padding: 1.4rem 5rem;
+        font-size: 2.5rem;
+        line-height: 40px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .prefooter-heading-style-h2 {
+        font-size: clamp(2rem, 4.8vw, 3.4rem);
+    }
+
+    .prefooter-center-btn {
+        padding: 1.4rem 3.5rem;
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .prefooter-heading-style-h2 {
+        font-size: clamp(1.7rem, 5.5vw, 3rem);
+    }
+
+    .prefooter-center-btn {
+        padding: 1.4rem 2.2rem;
+        font-size: 1.25rem;
+        border-radius: var(--btn-radius);
+    }
+}
+
+
+@media (max-width: 625px) {
+    .prefooter-heading-style-h2 {
+        font-size: clamp(2rem, 9vw, 3.4rem);
+        line-height: 4.2rem;
+    }
+    .prefooter-center-text{
+        font-size: clamp(2rem, 9vw, 3.4rem);
+        line-height: 4.2rem !important;
+    }
+}
+
+
+@media (max-width: 425px) {
+    .prefooter-heading-style-h2 {
+        font-size: clamp(2rem, 10vw, 3.1rem);
+        line-height: 4.8rem;
+        letter-spacing: 2px;
+        text-transform: uppercase !important;
+    }
+
+    .prefooter-center-text {
+        font-size: clamp(2rem, 10vw, 3.1rem);
+        line-height: 4.8rem !important;
+        letter-spacing: 2px;
+        text-transform: uppercase !important;
+    }
+
+    .prefooter-center-btn {
+        font-size: 1rem;
+        border-radius: 80px;
+    }
+
+    .prefooter-appearance-2,
+    .prefooter-appearance-1,
+    .prefooter-appearance-3 {
+        padding: 2rem;
+    }
+}
+
+.prefooter-center-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.5rem;
+    z-index: 20;
+    margin: 2rem auto; /* center horizontally */
+    height: 500px;
+    justify-content: center;
+    width: 75%;
+    color: var(--primary-color);
+}
+
+/* Hide center content initially to prevent flash before JS animation */
+.prefooter-center-text,
+.prefooter-center-btn {
+    opacity: 0;
+}
+
+.prefooter-center-text {
+    color: var(--primary-color);
+    font-size: clamp(2.4rem, 4.8vw, 4.1rem);
+    font-weight: var(--ahy-weight-extrabold);
+    font-family: var(--ahy-heading-font-tomorrow);
+    text-align: center;
+    opacity: 0;
+    /* Initially hidden for GSAP animation */
+    pointer-events: none;
+    text-transform: capitalize;
+}
+
+@media (max-width: 768px) {
+    .prefooter-center-container {
+        height: auto;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+
+
+/* Remove these conflicting opacity rules or set proper initial states */
+.prefooter-appearance-2,
+.prefooter-appearance-3 {
+    opacity: 0; /* This is fine - JS will control */
+}
+
+.prefooter-appearance-1 {
+    opacity: 1; /* Start visible */
+}
+
+/* Ensure headings start hidden for animation */
+.prefooter-heading-style-h2 {
+    opacity: 0; /* JS will animate these in */
+    transform: translate3d(0, 2rem, 0);
+}
+

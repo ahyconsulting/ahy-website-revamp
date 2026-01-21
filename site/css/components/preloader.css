@@ -1,0 +1,124 @@
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-weight: var(--ahy-weight-medium, 500);
+    font-family: var(--ahy-heading-font-tomorrow, sans-serif);
+}
+
+#main-logo {
+    width: 300px;
+    height: auto;
+    overflow: visible;
+    max-width: 90vw;
+}
+
+.logo-part {
+    transform-box: fill-box;
+    transform-origin: center center;
+}
+
+#loading-text {
+    margin-top: 1rem; 
+    font-size: 1.25rem;
+    color: #4b5563;
+    font-weight: var(--ahy-weight-semibold, 600);
+    letter-spacing: 0.1em;
+    text-align: center;
+    opacity: 0;
+}
+
+#loading-progress {
+    margin-top: 2rem;
+    width: 300px;
+    max-width: 80vw;
+    text-align: center;
+    opacity: 0;
+}
+
+#progress-bar {
+    --progress: 0%;
+    width: 100%;
+    height: 4px;
+    background-color: #e5e7eb;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+}
+
+#progress-bar::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: var(--progress);
+    background: linear-gradient(90deg, #ec1865, #aeba27, #f5cb01, #00a0b8);
+    will-change: width;
+    transition: width 0.15s linear;
+}
+
+.slot-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
+    font-size: 3rem;
+    color: #6b7280;
+    height: 1.5em;
+    overflow: hidden;
+    line-height: 1.5em;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    contain: layout style;
+}
+
+.slot-digit {
+    position: relative;
+    width: 0.7em;
+    height: 1.5em;
+    overflow: hidden;
+    display: inline-block;
+    user-select: none;
+    -webkit-user-select: none;
+    contain: strict;
+}
+
+.slot-numbers {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform;
+    contain: layout style;
+}
+
+.slot-numbers > div {
+    height: 1.5em;
+    line-height: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    contain: layout style;
+}
+
+.percent-symbol {
+    margin-left: 2px;
+}
+
+#preloader.loaded {
+    pointer-events: none;
+}

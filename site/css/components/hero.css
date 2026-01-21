@@ -1,0 +1,297 @@
+/* ===========================================
+   HERO SECTION - DESKTOP STYLES
+   =========================================== */
+.hero,
+.intro {
+    width: 100vw;
+    padding: 2.5em;
+}
+
+.hero {
+    /* Use fixed height calculation for consistency across devices */
+    height: 100vh;
+    height: 100dvh; /* Dynamic viewport height - more consistent on mobile */
+    min-height: 600px; /* Minimum to prevent content squishing */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 4rem;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.intro {
+    height: 100vh;
+    height: 100dvh;
+    position: relative;
+    z-index: 100;
+}
+
+.hero h1 {
+    position: relative;
+    left: -0.05em;
+    color: floralwhite;
+    font-weight: var(--ahy-weight-semibold);
+    font-size: 14vw;
+    letter-spacing: -10px;
+    top: 5rem;
+    text-transform: uppercase;
+    line-height: 1;
+    will-change: transform;
+    z-index: 2;
+    font-family: var(--ahy-heading-font-tomorrow);
+    user-select: none;
+}
+
+.hero-copy {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+    z-index: 2;
+    font-family: var(--ahy-body-font-grandstander);
+}
+
+.hero-copy p {
+    text-transform: uppercase;
+    font-weight: var(--ahy-weight-extrabold);
+    font-size: large;
+    font-family: var(--ahy-body-font-grandstander);
+    white-space: nowrap;
+}
+
+/* Wave Container */
+.wave-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.wave-container svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.outro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* ===========================================
+   DESKTOP VIDEO CONTAINER
+   =========================================== */
+.video-container-desktop {
+    position: relative;
+    transform: translateY(-105%) scale(0.25);
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    will-change: transform;
+    z-index: 100;
+}
+
+.video-container-desktop .video-title p {
+    position: relative;
+    font-size: 78px;
+    font-weight: var(--ahy-weight-semibold);
+    font-family: var(--ahy-body-font-grandstander);
+}
+
+/* ===========================================
+   MOBILE VIDEO CONTAINER - Hidden by default
+   =========================================== */
+.video-container-mobile {
+    display: none;
+}
+
+/* ===========================================
+   VIDEO PREVIEW STYLES (shared)
+   =========================================== */
+.video-preview {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 1.5rem;
+    background-color: #b9b9b3;
+    overflow: hidden;
+}
+
+.video-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+
+.intro video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 1.5rem;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+/* ===========================================
+   MOBILE STYLES (≤ 900px)
+   =========================================== */
+@media (max-width: 900px) {
+    /* Hide intro section entirely on mobile - managed by JS but CSS fallback */
+    .intro {
+        display: none !important;
+        height: 0 !important;
+        overflow: hidden !important;
+    }
+    
+    /* Hero section - centered content */
+    .hero {
+        height: 100dvh;
+        min-height: 500px;
+        max-height: none;
+        padding: 1.5rem 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 2.5rem;
+        overflow: hidden;
+        z-index: 1;
+        box-sizing: border-box;
+    }
+
+    .hero h1 {
+        font-size: 12vw;
+        top: 0;
+        letter-spacing: -2px;
+        flex-shrink: 0;
+    }
+
+    .hero-copy {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0 1rem;
+        flex-shrink: 0;
+        margin-top: 3rem;
+        max-width: 80%;
+    }
+
+    .hero-copy p {
+        white-space: normal;
+        text-align: center;
+        font-size: 0.9rem;
+        font-size:1.25rem !important
+    }
+
+    /* Hide desktop video on mobile */
+    .video-container-desktop {
+        display: none !important;
+    }
+
+    /* Mobile video container - matches desktop shape, scales on scroll */
+    .video-container-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 85%;
+        max-width: 400px;
+        margin: 0 auto;
+        margin-top: 3rem;
+        z-index: 10;
+        position: relative;
+        transform: scale(0.75);
+        transform-origin: center center;
+        will-change: transform;
+        gap: 1rem;
+    }
+
+    .video-container-mobile .video-preview {
+        width: 100%;
+        aspect-ratio: 16/9;
+        border-radius: 1.5rem;
+        overflow: hidden;
+        background-color: #b9b9b3;
+    }
+
+    .video-container-mobile .video-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 1.5rem;
+        overflow: hidden;
+    }
+
+    .video-container-mobile video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 1.5rem;
+    }
+
+    .video-container-mobile .video-title {
+        flex-shrink: 0;
+    }
+
+    .video-container-mobile .video-title p {
+        margin: 0;
+        font-size: 1.6rem;
+        font-weight: var(--ahy-weight-semibold);
+        text-align: center;
+        font-family: var(--ahy-body-font-grandstander);
+        line-height: 1.2;
+    }
+}
+
+/* ===========================================
+   SMALL MOBILE STYLES (≤ 480px)
+   =========================================== */
+@media (max-width: 480px) {
+    .hero {
+        padding-top: 6rem;
+        gap: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 13vw;
+        line-height: 1.1;
+    }
+
+    .video-container-mobile {
+        width: 95%;
+        max-height: 45vh;
+    }
+
+    .video-container-mobile .video-title p {
+        font-size: 1.2rem;
+    }
+}
+
+/* ===========================================
+   ABOUT SECTION POSITIONING
+   =========================================== */
+.about-scroll-container {
+    position: relative;
+    z-index: 2;
+    margin-top: 0;
+    /* GPU acceleration for smooth transitions */
+    transform: translateZ(0);
+}

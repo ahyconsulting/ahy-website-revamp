@@ -1,0 +1,441 @@
+.contact-section {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 100px 5% 80px 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-container {
+    display: flex;
+    gap: 60px;
+    max-width: 1300px;
+    width: 100%;
+    align-items: flex-start;
+}
+
+/* --- Left Side --- */
+.contact-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.contact-title {
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    font-weight: var(--ahy-weight-extrabold);
+    line-height: 1.2;
+    font-family: var(--ahy-heading-font-tomorrow);
+}
+
+.contact-title span {
+    color: #ed4381;
+}
+
+.stats {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    background: #151515;
+    padding: 20px 30px;
+    border-radius: 12px;
+    text-align: center;
+    flex: 1;
+    min-width: 150px;
+}
+
+.stat-card h3 {
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
+    color: #fff;
+    font-family: var(--ahy-heading-font-tomorrow);
+    font-weight: var(--ahy-weight-semibold);
+}
+
+.stat-card p {
+    color: #aaa;
+    font-size: clamp(1rem, 2vw, 0.9rem);
+    margin-top: 6px;
+    font-family: var(--ahy-body-font-grandstander);
+    font-weight: var(--ahy-weight-regular);
+}
+
+.testimonial {
+    display: flex;
+    background: #151515;
+    padding: 20px;
+    border-radius: 16px;
+    gap: 20px;
+    align-items: center;
+}
+
+.testimonial img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.testimonial-text h4 {
+    margin: 0;
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
+    font-family: var(--ahy-heading-font-tomorrow);
+    font-weight: var(--ahy-weight-semibold);
+}
+
+.testimonial-text .company {
+    color: #aaa;
+    font-size: clamp(1rem, 2vw, 1rem);
+    font-family: var(--ahy-body-font-grandstander);
+    font-weight: var(--ahy-weight-regular);
+}
+
+.testimonial-text .quote {
+    color: #ccc;
+    font-size: clamp(1rem, 2vw, 1rem);
+    margin-top: 8px;
+    font-family: var(--ahy-body-font-grandstander);
+    font-weight: var(--ahy-weight-regular);
+}
+
+.book-call p {
+    font-family: var(--ahy-body-font-grandstander);
+    font-weight: var(--ahy-weight-regular);
+}
+
+.book-call {
+    background: #151515;
+    padding: 20px 25px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-anim {
+    background: linear-gradient(90deg, #ed4381, #9f79ff);
+    border: none;
+    padding: 15px 25px;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: var(--ahy-body-font-grandstander);
+    font-weight: var(--ahy-weight-extrabold);
+    font-size: clamp(16px, 3vw, 20px);
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-two-col {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem 0;
+    gap: 20px;
+}
+
+.contact-two-col .left .label {
+    font-weight: var(--ahy-weight-semibold);
+    text-transform: capitalize;
+    font-family: var(--ahy-body-font-grandstander);
+}
+
+.contact-two-col .right p {
+    line-height: 2.4;
+    letter-spacing: 0.5px;
+    font-weight: var(--ahy-weight-regular);
+    font-family: var(--ahy-body-font-grandstander);
+    font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.contact-two-col a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: var(--ahy-weight-regular);
+    position: relative;
+    display: inline-block;
+    padding: 2px 0;
+}
+
+/* underline */
+.contact-two-col a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: currentColor; /* uses text color automatically */
+    transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* hover animation */
+.contact-two-col a:hover::before {
+    width: 100%;
+}
+
+
+/* --- Typeform --- */
+.contact-form {
+    flex: 1;
+    background: #151515;
+    border-radius: 20px;
+    height: 900px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.typeform-full {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+.testimonial-text {
+    width: 80%;
+}
+
+
+
+
+
+
+.testimonial {
+    display: flex;
+    background: #151515;
+    padding: 20px;
+    border-radius: 16px;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Wrapper for image to maintain perfect circle */
+.testimonial-img {
+    width: 70px;
+    /* fixed size, adjust as needed */
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    /* prevent shrinking on small screens */
+}
+
+.testimonial-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+    .contact-title {
+        font-size: clamp(2rem, 4vw, 2.5rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 1rem 3%;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .contact-form {
+        height: auto;
+        min-height: 90vh;
+        overflow: hidden;
+        border-radius: 16px;
+    }
+
+    .contact-title {
+        text-align: center;
+        font-size: clamp(1.9rem, 4vw, 2.2rem);
+    }
+
+    .book-call {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .testimonial {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .stats {
+        justify-content: center;
+    }
+
+    .contact-two-col {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-section {
+        padding: 7rem 5%;
+    }
+}
+
+@media (max-width: 625px) {
+    .contact-section {
+        padding: 7rem 5% 3rem 5%;
+    }
+}
+
+@media (max-width: 425px) {
+    .contact-section {
+        padding: 7rem 5%;
+    }
+
+    .stat-card h3 {
+        font-size: clamp(1.3rem, 4vw, 1.5rem);
+    }
+
+    .contact-title {
+        font-size: clamp(1.5rem, 4vw, 1.5rem);
+    }
+
+    .contact-info,
+    .contact-form {
+        max-width: 100%;
+    }
+
+    .contact-form {
+        min-height: 80vh;
+    }
+
+    .btn-anim {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 375px) {
+    .contact-section {
+        padding: 7rem 2rem;
+    }
+
+    .contact-title {
+        font-size: clamp(1.3rem, 4vw, 1.3rem);
+    }
+
+    .contact-form {
+        min-height: 90vh;
+    }
+}
+
+
+
+
+/* --- form --- */
+.contact-form {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #151515;
+    border-radius: 16px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Two-column row for first/last name */
+.form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Form group (label + input) */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Labels */
+.form-group label {
+    font-family: var(--ahy-body-font-grandstander);
+    margin-top: 12px;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    color: #ccc;
+    font-weight: 500;
+}
+
+/* Inputs and textarea */
+.contact-form input,
+.contact-form textarea {
+    font-family: var(--ahy-body-font-grandstander);
+    width: 100%;
+    padding: 12px 14px;
+    margin: 0;
+    /* remove extra margin, labels handle spacing */
+    color: white;
+    background: #1f1f1f;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: border-color 0.25s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #ed4381;
+}
+
+/* Textarea */
+.contact-form textarea {
+    min-height: 120px;
+    resize: none;
+}
+
+/* Submit button */
+.contact-form button {
+    font-family: var(--ahy-body-font-grandstander);
+    font-weight: var(--ahy-weight-extrabold);
+    width: 100%;
+    background: linear-gradient(90deg, #ed4381, #9f79ff);
+    color: #fff;
+    padding: 14px;
+    font-size: clamp(16px, 3vw, 20px);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap;
+    margin-top: 30px;
+}
+
+/* Stack columns on mobile */
+@media (max-width: 480px) {
+    .form-row {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 900px) {
+    .contact-container {
+        flex-direction: column;
+    }
+}

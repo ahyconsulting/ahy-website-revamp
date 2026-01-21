@@ -1,0 +1,7 @@
+name = "ahyconsulting-prod"
+main = "src/index.ts"
+compatibility_date = "2026-01-21"
+
+[assets]
+directory = "./site"
+binding = "ASSETS"

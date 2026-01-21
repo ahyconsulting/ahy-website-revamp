@@ -1,0 +1,63 @@
+<section class="hero">
+
+  <h1 class="anti-text-selection">Ahy Consulting</h1>
+
+  <div class="hero-copy">
+    <p>From pixels to performance, we design results.</p>
+  </div>
+
+    <div class="video-container-mobile" >
+    <div class="video-preview">
+      <div class="video-wrapper" style="background-color: black;">
+      </div>
+    </div>
+    <div class="video-title">
+      <p>PRO Showreel</p>
+      <p>2025 - 2026</p>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="intro">
+  <div class="video-container-desktop">
+    <div class="video-preview">
+      <div class="video-wrapper">
+      </div>
+    </div>
+    <div class="video-title">
+      <p>PRO Showreel</p>
+      <p>2025 - 2026</p>
+    </div>
+  </div>
+
+
+
+</section>
+
+<!-- Hero styles are now in css/components/hero.css -->
+<!-- Only critical above-the-fold styles kept inline for fast first paint -->
+<style>
+/* Critical: Prevent layout shift before CSS loads */
+.hero {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+.video-container-mobile {
+    display: none;
+}
+@media (max-width: 900px) {
+    .video-container-mobile {
+        display: flex;
+    }
+    .video-container-desktop {
+        display: none !important;
+    }
+    .intro {
+        display: none !important;
+    }
+}
+</style>

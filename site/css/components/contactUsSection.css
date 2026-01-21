@@ -1,0 +1,273 @@
+/* CONTACT SECTION */
+.contact-section {
+    height: 70vh;
+    position: relative;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fixed-bottom-gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: max(40vh, 200px);
+
+    /* Soft #ec1865 → white fade */
+    background: linear-gradient(to top,
+            rgba(236, 24, 101, 0.22),
+            rgba(255, 255, 255, 0));
+
+    pointer-events: none;
+    z-index: 3;
+}
+
+.contact-sticky {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-frame {
+    width: 100%;
+    max-width: 60%;
+    text-align: center;
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* TITLE */
+.contact-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: var(--ahy-weight-semibold);
+    margin-bottom: 1rem;
+    font-family: var(--ahy-heading-font-tomorrow);
+}
+
+.contact-title span {
+    color: #ff2d65;
+    /* font-size: clamp(2.2rem, 4.5vw, 3.4rem); */
+}
+
+/* SUBTEXT */
+.contact-sub {
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    margin-bottom: 2rem;
+    font-family: var(--ahy-body-font-grandstander);
+    opacity: 0.9;
+    font-weight: var(--ahy-weight-regular);
+    text-transform: uppercase;
+}
+
+/* BUTTON WRAPPER */
+.contact-btn-wrapper {
+    margin-top: 1rem;
+}
+
+/* BUTTON (Best Practice) */
+.contact-btn {
+    padding: 0.75rem 2rem;
+    background-color: #000;
+    color: #fff;
+    font-weight: var(--ahy-weight-semibold);
+    font-family: var(--ahy-body-font-grandstander);
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: #eb285c;
+}
+
+.contact-btn:active {
+    transform: scale(0.98);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .contact-section {
+        height: auto;
+        padding: 5rem 1rem;
+    }
+
+    .contact-title {
+        font-size: 2rem;
+    }
+
+    .contact-sub {
+        font-size: 1.25rem;
+    }
+
+    .contact-frame {
+        max-width: 100%;
+    }
+}
+
+/* background headline element */
+.contact-bg-text {
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 90%;
+    text-align: center;
+
+    font-size: clamp(6rem, 15vw, 18rem);
+    font-family: var(--ahy-heading-font-tomorrow);
+    font-weight: var(--ahy-weight-extrabold);
+
+    color: #000;
+    opacity: 0.03 !important;
+    letter-spacing: -2px;
+
+    pointer-events: none;
+    user-select: none;
+    z-index: 1;
+    line-height: 1;
+    white-space: normal;
+}
+
+.btn-anim {
+    padding: 0.7rem 1.4rem;
+}
+
+/* mobile adjustments */
+@media (max-width: 768px) {
+    .contact-bg-text {
+        font-size: clamp(3rem, 17vw, 8rem);
+        max-width: 80%;
+        line-height: 1.5;
+    }
+
+    .panel {
+        padding: 4rem 1rem;
+    }
+}
+@media (max-width: 480px) {
+   .btn-anim {
+    padding: 0.7rem 1.4rem;
+    font-size: 1.5rem;
+}
+}
+
+
+
+
+/* ---------------------------------------------------- */
+    /* --- NEW & FIXED BUTTON CSS (SLOT ANIMATION) --- */
+    /* ---------------------------------------------------- */
+
+    .contactUs-btn-text-wrapper {
+        --btn-bg: #000000;
+        --btn-text: #ffffff;
+        --btn-padding: 1.5rem 3rem;
+        --btn-radius: 50px;
+        
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        
+        background: var(--btn-bg);
+        color: var(--btn-text);
+        padding: var(--btn-padding);
+        border-radius: var(--btn-radius);
+        
+        font-family: var(--ahy-body-font-grandstander);
+        font-size: clamp(1rem, 4vw, 1.8rem);
+        font-weight: var(--ahy-weight-extrabold);
+        letter-spacing: 0.5px;
+        text-decoration: none;
+        line-height: 1;
+        
+        cursor: pointer;
+        overflow: hidden; /* Essential for masking the slot text */
+        box-shadow: 0 2px 8px -1px rgba(39, 94, 254, 0.32);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        
+        /* Ensure minimum width to prevent jitter if text sizes vary drastically */
+        min-width: 250px; 
+    }
+
+    .contactUs-center-btn{
+        text-decoration: none;
+    }
+
+    .contactUs-btn-text-wrapper:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 20px -2px rgba(39, 94, 254, 0.5);
+    }
+
+    /* This wrapper uses Grid to stack the two text states exactly on top of each other */
+    .contactUs-btn-text-wrapper {
+        display: grid;
+        place-items: center;
+        position: relative;
+        overflow: hidden;
+        height: 4.7rem; /* Define height based on font size */
+        text-decoration: none;
+    }
+
+    .text-default,
+    .text-hover {
+        grid-area: 1 / 1; /* Both occupy the same space */
+        display: flex;    /* Flex for char spans */
+        white-space: nowrap;
+        will-change: transform;
+    }
+
+    /* Individual character styles */
+     .char {
+        display: inline-block;
+        transform-style: preserve-3d;
+        backface-visibility: hidden;
+    }
+    
+    /* Hover text starts hidden below */
+    .text-hover .char {
+        transform: translateY(100%); 
+        opacity: 0;
+    }
+
+    /* Default text starts visible */
+    .text-default .char {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+
+    /* --- RESPONSIVE QUERIES --- */
+    @media (max-width: 768px) {
+        .prefooter-heading-style-h2 {
+            font-size: clamp(1.25rem, 6vw, 2.5rem);
+        }
+        .contactUs-btn-text-wrapper {
+            padding: 1.2rem 2.5rem;
+            min-width: 200px;
+        }
+
+        .contactUs-btn-text-wrapper {
+            height: 3.5rem; /* Adjust height for smaller font size */
+        }
+
+    }
+
+    @media (max-width: 425px) {
+        .contactUs-btn-text-wrapper {
+            padding: 1rem 2rem;
+            min-width: auto;
+            width: 90%;
+        }
+    }

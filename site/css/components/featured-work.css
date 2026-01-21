@@ -1,0 +1,195 @@
+.featuredWork-section {
+    height: 450vh;
+    position: relative;
+    padding-bottom: 0px !important;
+}
+
+.featuredWork-container {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    padding: 0 2%;
+}
+
+/* RESPONSIVE GRID CONTAINER 
+           Desktop: 16/9 (Landscape)
+           Mobile:  3/5 (Portrait)
+        */
+.featuredWork-mainWrapper {
+    width: 100%;
+    max-width: 1600px;
+    aspect-ratio: 16/9;
+    max-height: 85vh;
+    position: relative;
+    margin: 0 auto;
+    transition: aspect-ratio 0.3s ease;
+}
+
+/* Mobile Breakpoint */
+@media (max-width: 768px) {
+    .featuredWork-mainWrapper {
+        aspect-ratio: 3/5;
+        /* Taller format for mobile */
+        width: 95%;
+    }
+}
+
+.fw-item {
+    position: absolute;
+    border-radius: 16px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1e3a4f, #2d5a4f);
+    cursor: pointer;
+    will-change: transform, width, height, left, top;
+    transform: translateZ(0);
+}
+
+/* Ensure anchors using the fw-item class behave like block-level items and
+   inherit color/text styles so links are visually consistent. */
+a.fw-item {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    /* ensure anchor behaves like the div it replaced */
+}
+
+/* keyboard accessibility focus style */
+a.fw-item:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.12);
+}
+
+/* Initial Center State */
+.item-video {
+    width: 80%;
+    height: 15%;
+    left: 10%;
+    /* Changed from 50% */
+    top: 42.5%;
+    /* Changed from 50% - this centers it vertically */
+    /* Removed transform: translate(-50%, -50%); */
+    z-index: 10;
+}
+
+.item-card {
+    /* Initial state off-screen or hidden is handled by GSAP, 
+               but we set defaults here for safety */
+    width: 0;
+    height: 0;
+    opacity: 0;
+    z-index: 5;
+}
+
+.fw-media {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease-out;
+}
+
+.fw-item:hover .fw-media {
+    transform: scale(1.05);
+}
+
+/* Overlays */
+.fw-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.fw-cardContent {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    opacity: 1;
+    transition: opacity 0.3s;
+    z-index: 2;
+    color: #fff;
+    font-weight: var(--ahy-weight-semibold);
+}
+
+/* Marquee */
+.featuredWork-marquee {
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    padding: 0.85rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.marquee-inner {
+    display: flex;
+    gap: 4vw;
+}
+
+.marquee-text {
+    font-size: 8vw;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    color: rgba(255, 255, 255, 0.9);
+    text-transform: uppercase;
+    line-height: 1;
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .marquee-text {
+        font-size: 12vw;
+    }
+
+    /* Larger text on mobile */
+}
+
+.fw-char {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(100%);
+    will-change: transform, opacity;
+}
+
+.fw-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.card-title {
+    font-size: 1.2rem;
+}
+
+.fw-schema {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        45deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.1) 50%,
+        transparent 70%
+    );
+    background-size: 200% 200%;
+    opacity: 0.5;
+}
