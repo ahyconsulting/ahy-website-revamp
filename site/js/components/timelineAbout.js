@@ -155,14 +155,19 @@
             sections.forEach((section) => {
                 const content = section.querySelector('.timelineAbout-content');
                 if (content) {
+                    // Set initial state first
+                    gsap.set(content, { opacity: 0, y: 30 });
+                    
                     gsap.to(content, {
                         opacity: 1,
                         y: 0,
                         duration: 0.8,
+                        ease: 'power2.out',
                         scrollTrigger: {
                             trigger: section,
-                            start: "top 65%", 
-                            toggleActions: 'play none none reverse'
+                            start: "top 75%",
+                            end: "top 25%",
+                            toggleActions: 'play none none none'
                         }
                     });
                 }

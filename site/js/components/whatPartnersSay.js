@@ -89,6 +89,9 @@
             }
         });
 
+        // Ensure title starts visible
+        gsap.set(title, { opacity: 1, scale: 1, y: 0 });
+
         // Create timeline with ScrollTrigger
         // compute a longer 'end' distance to make the scroll feel longer and more gradual
         const endDistance = Math.max(
@@ -112,11 +115,11 @@
         }
 
         // choose start/end/scrub values depending on viewport size
-        const scrollStart = isMobile ? "top 85%" : "top center+=230";
+        const scrollStart = isMobile ? "top 90%" : "top 80%";
         const scrollEnd = isMobile
             ? `+=${Math.round(mobileEndDistance)}`
             : `+=${Math.round(endDistance)}`;
-        const scrubValue = isMobile ? 0.3 : 0.6;
+        const scrubValue = isMobile ? 0.8 : 1.2;
 
         const tl = gsap.timeline({
             scrollTrigger: {
@@ -135,24 +138,25 @@
             },
         });
 
-        // Title: first scale down slightly, then fade out
+        // Title: scale down slightly but keep visible
         if (!isMobile) {
-            // Desktop/tablet: same as before
-            tl.to(title, { scale: 0.9, duration: 0.35, ease: "power1.out" });
-            tl.to(
-                title,
-                { autoAlpha: 0, duration: 0.7, ease: "power2.inOut" },
-                "+=0.02"
-            );
+            // Desktop/tablet: scale and move up, but keep visible
+            tl.to(title, { 
+                scale: 0.92, 
+                y: -20,
+                opacity: 0.85,
+                duration: 0.5, 
+                ease: "power2.out" 
+            });
         } else {
             // Mobile: animate position/scale but keep visible
             tl.to(title, {
-                y: -30,          // slide up a bit as you scroll
+                y: -20,          // slide up a bit as you scroll
                 scale: 0.95,     // optional subtle scale
-                duration: 0.7,
+                opacity: 0.9,
+                duration: 0.5,
                 ease: "power2.out",
             });
-            // No autoAlpha change -> stays visible
         }
 
 
