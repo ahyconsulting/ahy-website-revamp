@@ -1,6 +1,6 @@
 {
     "hyva": {
-        "title": "Hyvä",
+        "title": "Hyvä Themes",
         "subtitle": "Experts in building fast, modern, and scalable Magento 2 storefronts using the Hyvä theme for high-performance e-commerce experiences."
     },
     "react": {
@@ -28,15 +28,15 @@
          "subtitle": "We design and engineer scalable digital systems for growing businesses, reducing complexity, enabling change, and turning strategy into execution."
     },
     "team": {
-        "title": "Team",
+        "title": "Our Team",
         "subtitle": "A team where creativity meets excellence. Where ideas turn into meaningful experiences. And innovation drives everything we do."
     },
     "about": {
-        "title": "About",
+        "title": "Who We Are",
         "subtitle": "We design and build powerful eCommerce platforms and digital solutions that help businesses grow. By combining strategic thinking, creative design."
     },
     "contact": {
-        "title": "Contact",
+        "title": "Contact Us",
         "subtitle": "We design and build powerful eCommerce platforms and digital solutions that help businesses grow by combining strategic thinking and creative design."
     }
 }
