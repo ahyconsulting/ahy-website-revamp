@@ -57,7 +57,7 @@ document.addEventListener("preloaderComplete", function () {    // obtain plugin
         languages: {
             en: {
                 consent_modal: {
-                    title: "AhyConsulting.ahydev.com Cookies!",
+                    title: "AhyConsulting.com Cookies!",
                     description:
                         'Our website by default only uses cookies and similar technology [hereinafter "Cookies"] for basic website functions / settings. If you want to stay with the default settings that we\'ve selected, please click "Manage Preferences" and "Save Settings". You may also change the default settings and allow cookies in the Manage Preferences section as per your choice. By clicking "Accept All" you allow all the cookies. <button type="button" data-cc="c-settings" class="cc-link">Manage Preferences</button>',
                     primary_btn: {
