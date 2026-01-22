@@ -115,7 +115,7 @@
         }
 
         // choose start/end/scrub values depending on viewport size
-        const scrollStart = isMobile ? "top 90%" : "top 80%";
+        const scrollStart = isMobile ? "top 90%" : "top 60%";
         const scrollEnd = isMobile
             ? `+=${Math.round(mobileEndDistance)}`
             : `+=${Math.round(endDistance)}`;

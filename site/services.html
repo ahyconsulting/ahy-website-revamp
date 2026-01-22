@@ -12,8 +12,8 @@
     </script> -->
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=10.0, user-scalable=yes" />
-        <title>How We Think | Leading Progressive Stack Development Agency | Ahy Consulting</title>
-        <meta name="description" content="Build future‑ready eCommerce and enterprise apps with Ahy Consulting’s expert developers in Magento, WordPress, Shopify, React, and React Native." />
+        <title>What We Do | How We Create Value Through Systems</title>
+        <meta name="description" content="We design and build scalable commerce, AI, and digital systems—focused on outcomes, architecture, and long-term adaptability, not tools." />
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag() {
@@ -47,9 +47,9 @@
             {
                 "@context": "https://schema.org",
                 "@type": "WebPage",
-                "@id": "https://ahy-website-revamp.ahyconsulting.workers.dev/how-we-think",
-                "url": "https://ahy-website-revamp.ahyconsulting.workers.dev/how-we-think",
-                "name": "Research Lab – Ahy Consulting",
+                "@id": "https://ahy-website-revamp.ahyconsulting.workers.dev/services",
+                "url": "https://ahy-website-revamp.ahyconsulting.workers.dev/services",
+                "name": "Services – Ahy Consulting",
                 "isPartOf": {
                     "@type": "WebSite",
                     "@id": "https://ahy-website-revamp.ahyconsulting.workers.dev/#website"
@@ -71,8 +71,8 @@
                     {
                         "@type": "ListItem",
                         "position": 2,
-                        "name": "Research Lab",
-                        "item": "https://ahy-website-revamp.ahyconsulting.workers.dev/how-we-think"
+                        "name": "Services",
+                        "item": "https://ahy-website-revamp.ahyconsulting.workers.dev/services"
                     }
                 ]
             }
@@ -85,8 +85,7 @@
                 "@id": "https://ahy-website-revamp.ahyconsulting.workers.dev/#business",
                 "name": "Ahy Consulting",
                 "url": "https://ahy-website-revamp.ahyconsulting.workers.dev/",
-                "logo": "https://ahy-website-revamp.ahyconsulting.workers.dev/assets/ahy-logo.webp",
-                "sameAs": ["https://www.facebook.com/ahyconsulting", "https://www.twitter.com/ahyconsulting", "https://www.instagram.com/ahyconsulting/", "https://www.linkedin.com/in/ahyharpreet"]
+                "logo": "https://ahy-website-revamp.ahyconsulting.workers.dev/assets/ahy-logo.webp"
             }
         </script>
 
@@ -94,29 +93,37 @@
             {
                 "@context": "https://schema.org",
                 "@type": "ItemList",
-                "name": "Ahy Consulting Research Lab Focus Areas",
+                "name": "Ahy Consulting Services",
                 "itemListElement": [
                     {
-                        "@type": "CreativeWork",
+                        "@type": "Service",
                         "position": 1,
-                        "name": "Emerging Web Technologies Research",
-                        "creator": {
+                        "name": "Magento Development",
+                        "provider": {
                             "@id": "https://ahy-website-revamp.ahyconsulting.workers.dev/#business"
                         }
                     },
                     {
-                        "@type": "CreativeWork",
+                        "@type": "Service",
                         "position": 2,
-                        "name": "AI & Automation Experiments",
-                        "creator": {
+                        "name": "WordPress Development",
+                        "provider": {
                             "@id": "https://ahy-website-revamp.ahyconsulting.workers.dev/#business"
                         }
                     },
                     {
-                        "@type": "CreativeWork",
+                        "@type": "Service",
                         "position": 3,
-                        "name": "Performance & Scalability Studies",
-                        "creator": {
+                        "name": "Shopify Development",
+                        "provider": {
+                            "@id": "https://ahy-website-revamp.ahyconsulting.workers.dev/#business"
+                        }
+                    },
+                    {
+                        "@type": "Service",
+                        "position": 4,
+                        "name": "Progressive Web App Development",
+                        "provider": {
                             "@id": "https://ahy-website-revamp.ahyconsulting.workers.dev/#business"
                         }
                     }
@@ -124,13 +131,20 @@
             }
         </script>
 
-        <link rel="stylesheet" href="css/main.css?v=dev" />
-        <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrambleTextPlugin.min.js"></script>
+        <!-- Main Styles -->
+        <link rel="preload" href="css/main.css?v=dev" as="style" onload="this.rel = 'stylesheet'" />
+        <noscript><link rel="stylesheet" href="css/main.css?v=dev" /></noscript>
+
+        <!-- Preload fonts CSS asynchronously -->
+        <link rel="preload" href="fonts.css" as="style" onload="this.rel = 'stylesheet'" />
+        <noscript><link rel="stylesheet" href="fonts.css" /></noscript>
         <link rel="shortcut icon" href="/assets/ahy-logo.webp" type="image/webp" />
+        <link rel="preload" as="image" href="/assets/ahy-logo.webp" fetchpriority="high" />
         <div data-component="header"></div>
     </head>
 
-    <body data-page="researchLab">
+    <body data-page="services">
+        <!-- ScrollSmoother wrapper -->
         <div class="gradient-blobs">
             <video class="blobs-video" src="/assets/video/background-video.mp4" autoplay muted loop playsinline></video>
             <div class="blob blob-1"></div>
@@ -139,28 +153,38 @@
             <div class="blob blob-4"></div>
             <div class="blob blob-5"></div>
         </div>
-        <!-- ScrollSmoother wrapper structure -->
         <div id="smooth-wrapper">
             <div id="smooth-content">
                 <main>
                     <div data-component="heroSection"></div>
-                    <div data-component="research-lab-slider-section"></div>
-                    <div data-component="parallax-img-section"></div>
+                    <div data-component="ourCapabilities"></div>
+                    <div data-component="CommerceManifesto"></div>
+                    <div data-component="servicepageTechnologyStrip"></div>
+                    <div data-component="technologyService"></div>
+                    <div data-component="sanser"></div>
+                    <div data-component="contactUsSection"></div>
                 </main>
                 <div data-component="footer"></div>
             </div>
         </div>
 
-        <!-- GSAP Scripts -->
-        <script defer src="/js/gsap.min.js"></script>
-        <script defer src="/js/ScrollSmoother.min.js"></script>
-        <script defer src="/js/ScrollTrigger.min.js"></script>
-        <script defer src="/js/circletype.min.js"></script>
-        <script defer src="/js/SplitText.min.js"></script>
-        <script defer src="/js/ScrollToPlugin.min.js"></script>
-
-        <script src="js/componentLoader.js?v=dev"></script>
-        <script defer src="js/gsap-smooth-scroll.js?v=dev"></script>
+        <!-- GSAP (Single Source) -->
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollSmoother.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/MotionPathPlugin.min.js"></script>
+        <!-- <script  defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/DrawSVGPlugin.min.js"></script> -->
+        <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrambleTextPlugin.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/SplitText.min.js"></script>
+        <script defer src="https://unpkg.com/gsap@3/dist/SplitText.min.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/circletype@2.3.0/dist/circletype.min.js"></script>
         <div data-component="rotatingBadge"></div>
+
+        <!-- Local Scripts -->
+        <script defer src="js/componentLoader.js?v=dev"></script>
+        <!-- <script defer type="module" src="js/main.js"></script> -->
+         <script defer src="js/main.js"></script>
+        <!-- <script defer src="/js/gsap-smooth-scroll.js?v=dev"></script> -->
     </body>
 </html>
