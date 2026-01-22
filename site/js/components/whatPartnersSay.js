@@ -116,7 +116,7 @@
 
         // choose start/end/scrub values depending on viewport size
         // on desktop use a slightly later start and smaller scrub for a quicker reveal
-        const scrollStart = isMobile ? "top 90%" : "top 60%";
+        const scrollStart = isMobile ? "top 90%" : "top 25%";
         const scrollEnd = isMobile
             ? `+=${Math.round(mobileEndDistance)}`
             : `+=${Math.round(endDistance)}`;
@@ -145,7 +145,7 @@
             tl.to(title, { 
                 scale: 0.92, 
                 y: -20,
-                opacity: 0.85,
+                opacity: 0,
                 duration: 0.35, 
                 ease: "power2.out" 
             });
