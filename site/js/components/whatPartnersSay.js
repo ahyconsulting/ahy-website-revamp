@@ -93,11 +93,11 @@
         gsap.set(title, { opacity: 1, scale: 1, y: 0 });
 
         // Create timeline with ScrollTrigger
-        // compute a longer 'end' distance to make the scroll feel longer and more gradual
+        // compute end distance. reduce on desktop so cards reveal faster
         const endDistance = Math.max(
-            window.innerHeight * 1.2,
-            section.offsetHeight * 1.1,
-            900
+            window.innerHeight * 0.9,
+            section.offsetHeight * 1.05,
+            600
         );
 
         // For mobile we want the animation to start earlier and play over a shorter distance
@@ -115,11 +115,12 @@
         }
 
         // choose start/end/scrub values depending on viewport size
+        // on desktop use a slightly later start and smaller scrub for a quicker reveal
         const scrollStart = isMobile ? "top 90%" : "top 60%";
         const scrollEnd = isMobile
             ? `+=${Math.round(mobileEndDistance)}`
             : `+=${Math.round(endDistance)}`;
-        const scrubValue = isMobile ? 0.8 : 1.2;
+        const scrubValue = isMobile ? 0.8 : 0.7;
 
         const tl = gsap.timeline({
             scrollTrigger: {
@@ -140,12 +141,12 @@
 
         // Title: scale down slightly but keep visible
         if (!isMobile) {
-            // Desktop/tablet: scale and move up, but keep visible
+            // Desktop/tablet: scale and move up, but keep visible (shorter duration)
             tl.to(title, { 
                 scale: 0.92, 
                 y: -20,
                 opacity: 0.85,
-                duration: 0.5, 
+                duration: 0.35, 
                 ease: "power2.out" 
             });
         } else {
@@ -189,11 +190,11 @@
                         y: 0,
                         rotation: targetRotation,
                         autoAlpha: 1,
-                        duration: 0.9,
+                        duration: 0.5,
                         ease: "power2.out",
                     },
-                    `-=${0.4 - i * 0.03}`
-                ); // small overlap with previous item
+                    `-=${0.45 - i * 0.03}`
+                ); // larger overlap for a faster, snappier reveal
             });
         }
 

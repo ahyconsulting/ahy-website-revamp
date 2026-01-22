@@ -7,7 +7,7 @@ export default {
     // -----------------------------
     // HTTP BASIC AUTH FOR PREPROD
     // -----------------------------
-    if (isPreprod) {
+    /* if (isPreprod) {
       const authHeader = request.headers.get("Authorization");
 
       if (!authHeader || !authHeader.startsWith("Basic ")) {
@@ -34,7 +34,7 @@ export default {
           },
         });
       }
-    }
+    } */
 
     // -----------------------------
     // STATIC ASSET HANDLING

@@ -37,13 +37,19 @@
     },
      "career": {
         "title": "Get In Touch",
-        "subtitle": "We'd love to hear from you. Whether you have a question about our services, pricing, or anything else, our team is ready to answer all your questions.",
+        "subtitle": "We’d love to hear from you. Whether you’re exploring new opportunities or believe your ideas can help shape meaningful experiences, let’s start a conversation.",
         "button": "Send Message",
         "bgText": "CONTACT"
     },
      "team": {
         "title": "Get In Touch",
         "subtitle": "We'd love to hear from you. Whether you have a question about our services, pricing, or anything else, our team is ready to answer all your questions.",
+        "button": "Send Message",
+        "bgText": "CONTACT"
+    },
+     "partners": {
+        "title": "Get In Touch",
+        "subtitle": "We work with forward-thinking partners who share our commitment to building meaningful, scalable experiences. If you’re looking to collaborate, integrate, or grow together, we’d love to start the conversation..",
         "button": "Send Message",
         "bgText": "CONTACT"
     }
