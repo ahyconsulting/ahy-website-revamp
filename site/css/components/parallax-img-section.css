@@ -244,6 +244,7 @@
 
     .pk-scroll__img {
         width: 110px;
+        opacity: 0.60;
     }
 
     .pk-scroll__img--1 {
@@ -282,6 +283,7 @@
 
     .pk-scroll__img {
         width: 85px;
+        opacity: 0.50;
     }
 
     .pk-scroll__img--1 {

@@ -17,7 +17,7 @@
     },
     "researchLab": {
          "title": "How We Think",
-        "subtitle": "We study what's coming, question what's common, and design systems that endure change, scale, and intelligence."
+        "subtitle": "We think beyond what works today to build systems that hold up tomorrow."
     },
     "career": {
         "title": "Career",
@@ -25,18 +25,22 @@
     },
     "services": {
         "title": "What We Do",
-         "subtitle": "We design and engineer scalable digital systems for growing businesses, reducing complexity, enabling change, and turning strategy into execution."
+         "subtitle": "We design and engineer intelligent digital systems that combine AI, data, and software to reduce complexity, enable change, and turn strategy into execution."
     },
     "team": {
         "title": "Our Team",
-        "subtitle": "A team where creativity meets excellence. Where ideas turn into meaningful experiences. And innovation drives everything we do."
+        "subtitle": "A team built around clarity, accountability and high standards. We turn complex ideas into systems that work in the real world, delivering experiences that are purposeful, reliable, and designed to last. Innovation, for us, is not about novelty, but about raising the quality of outcomes we create."
     },
     "about": {
         "title": "Who We Are",
-        "subtitle": "We design and build powerful eCommerce platforms and digital solutions that help businesses grow. By combining strategic thinking, creative design."
+        "subtitle": "We help businesses improve how they operate, decide and scale. By aligning strategy, experience and intelligent systems, we design digital platforms that reduce complexity, enable better decisions and support long-term growth."
     },
     "contact": {
         "title": "Contact Us",
-        "subtitle": "We design and build powerful eCommerce platforms and digital solutions that help businesses grow by combining strategic thinking and creative design."
+        "subtitle": "We work with organizations facing important digital decisions. If you're planning what comes next, rethinking how your systems support the business, or navigating complexity at scale, let's start a conversation."
+    },
+     "partners": {
+        "title": "Partners",
+        "subtitle": "A network of leading partners providing scalable solutions. Innovating across industries. Delivering measurable results."
     }
 }
