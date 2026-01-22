@@ -67,192 +67,180 @@
             window.ASSET_VERSION = Date.now();
         </script>
 
-        <!-- 1. WebSite -->
-        <script type="application/ld+json">
-            {
-                "@context": "https://schema.org",
-                "@type": "WebSite",
-                "@id": "https://ahyconsulting.com/",
-                "name": "Ahy Consulting",
-                "alternateName": "eCommerce Website Design Agency",
-                "url": "https://ahyconsulting.com/"
-            }
-        </script>
+       <!-- Schema.Org Text -->
+    <script type="application/ld+json">
+                    {
+                      "@context": "http://www.schema.org",
+                      "@type": "WebSite",
+                      "name": "Ahy Consulting ",
+                      "alternateName": "eCommerce Website Design Agency",
+                      "url": "https://www.ahyconsulting.com/about"
+                    }
+                     </script>    
 
-        <!-- 2. Breadcrumb -->
-        <script type="application/ld+json">
-            {
-                "@context": "https://schema.org",
-                "@type": "BreadcrumbList",
-                "itemListElement": [
-                    {
-                        "@type": "ListItem",
-                        "position": 1,
-                        "name": "Home",
-                        "item": "https://ahyconsulting.com/"
-                    },
-                    {
-                        "@type": "ListItem",
-                        "position": 2,
-                        "name": "About",
-                        "item": "https://ahyconsulting.com/about"
-                    }
-                ]
-            }
-        </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.ahyconsulting.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "about"
+      }]
+    }
+    </script>
 
-        <!-- 3. Dataset / Services Overview -->
-        <script type="application/ld+json">
-            {
-                "@context": "https://schema.org",
-                "@type": "Dataset",
-                "name": "Ahy Consulting",
-                "description": "Magento Development experts, WordPress Development Experts, Highly Skilled and reliable progressive stack development agency.",
-                "url": "https://ahyconsulting.com/",
-                "keywords": ["WEB DESIGN > ECOMMERCE > MAGENTO DEVELOPMENT", "WEB DESIGN > ECOMMERCE > WORDPRESS DEVELOPMENT", "WEB DESIGN > CMS > WORDPRESS DEVELOPMENT", "WEB DESIGN > ECOMMERCE > SHOPIFY DEVELOPMENT", "APP DESIGN > MOBILE > PROGRESSIVE WEB APP"],
-                "creator": {
-                    "@type": "Organization",
-                    "url": "https://ahyconsulting.com/",
-                    "name": "Ahy Consulting > Website Design and Development Agency",
-                    "contactPoint": {
-                        "@type": "ContactPoint",
-                        "contactType": "customer service",
-                        "telephone": "+91-91-6767-6599",
-                        "email": "harpreet@ahyconsulting.com"
-                    }
-                },
-                "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-                "includedInDataCatalog": {
-                    "@type": "DataCatalog",
-                    "name": "ahyconsulting.com"
-                },
-                "temporalCoverage": "2015-01-01/2019-12-18",
-                "spatialCoverage": {
-                    "@type": "Place",
-                    "geo": {
-                        "@type": "GeoShape",
-                        "box": "18.0 -65.0 72.0 172.0"
-                    }
-                }
-            }
-        </script>
 
-        <!-- 4. Organization / Service Info -->
-        <script type="application/ld+json">
-            {
-                "@context": "https://schema.org",
-                "@type": ["ProfessionalService", "CreativeWork", "Service"],
-                "@id": "https://ahyconsulting.com/",
-                "name": "Website Design and Development Agency",
-                "description": "Magento Development experts, WordPress Development Experts, Highly Skilled and reliable progressive stack development agency.",
-                "disambiguatingDescription": "Ranked 2nd by Visual Objects for Best eCommerce Development Company in Mumbai",
-                "address": {
-                    "@type": "PostalAddress",
-                    "streetAddress": "Thane",
-                    "addressLocality": "Mumbai",
-                    "addressRegion": "MH",
-                    "postalCode": "400601",
-                    "addressCountry": "IN"
-                },
-                "geo": {
-                    "@type": "GeoCoordinates",
-                    "latitude": 19.1906291,
-                    "longitude": 72.977028
-                },
-                "telephone": "+91 9167676599",
-                "url": "https://ahyconsulting.com/",
-                "image": ["https://www.ahyconsulting.com/img/logo/ahyblacklogo.png", "https://www.ahyconsulting.com/img/team/team-3/harpreet.jpg", "https://www.ahyconsulting.com/img/team/team-3/harisingh.jpg", "https://www.ahyconsulting.com/img/team/team-3/mona.jpg"],
-                "review": {
-                    "@type": "Review",
-                    "reviewRating": {
-                        "@type": "Rating",
-                        "ratingValue": "4.9",
-                        "bestRating": "5"
-                    },
-                    "author": {
-                        "@type": "Person",
-                        "name": "Harpreet Singh"
-                    }
-                },
-                "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "4.9",
-                    "reviewCount": "183"
-                },
-                "award": "Top eCommerce Development Company in New Jersey, Top eCommerce Development Company in Mumbai",
-                "priceRange": "$$$",
-                "openingHoursSpecification": [
-                    {
-                        "@type": "OpeningHoursSpecification",
-                        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                        "opens": "09:00",
-                        "closes": "22:00"
-                    },
-                    {
-                        "@type": "OpeningHoursSpecification",
-                        "dayOfWeek": ["Saturday", "Sunday"],
-                        "opens": "11:30",
-                        "closes": "23:00"
-                    }
-                ],
-                "brand": "Ahy Consulting",
-                "slogan": "Technology Simplified",
-                "sameAs": ["https://www.facebook.com/ahyconsulting", "https://www.twitter.com/ahyconsulting", "https://www.instagram.com/ahyconsulting/", "https://www.linkedin.com/in/ahyharpreet"]
-            }
-        </script>
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org/",
+      "@type":"Dataset",
+      "name":"Ahy Consulting",
+      "description":"Magento Development experts, Wordpress Development Experts, Highly Skilled and reliable progressive stack developmeent agency.",
+      "url":"https://www.ahyconsulting.com",
+      "keywords":[
+         "WEB DESIGN > ECOMMERCE > MAGENTO DEVELOPMENT",
+         "WEB DESIGN > ECOMMERCE > WORDPRESS DEVELOPMENT",
+         "WEB DESIGN > CMS > WORDPRESS DEVELOPMENT",
+         "WEB DESIGN > ECOMMERCE > SHOPIFY DEVELOPMENT",
+         "APP DESIGN > MOBILE > PROGRESSIVE WEB APP"
+      ],
+      "creator":{
+         "@type":"Organization",
+         "url": "https://www.ahyconsulting.com/",
+         "name":"Ahy Consulting > Website Design and Development Agency",
+         "contactPoint":{
+            "@type":"ContactPoint",
+            "contactType": "customer service",
+            "telephone":"+91-91-6767-6599",
+            "email":"harpreet@ahyconsulting.com"
+         }
+      },
+      "license" : "https://creativecommons.org/publicdomain/zero/1.0/",
+      "includedInDataCatalog":{
+         "@type":"DataCatalog",
+         "name":"Ahyconsulting.com"
+      },
+      "temporalCoverage":"2015-01-01/2019-12-18",
+      "spatialCoverage":{
+         "@type":"Place",
+         "geo":{
+            "@type":"GeoShape",
+            "box":"18.0 -65.0 72.0 172.0"
+         }
+      }
+    }
+    </script>
 
-        <!-- 5. Organization / Logo -->
-        <script type="application/ld+json">
-            {
-                "@context": "https://schema.org",
-                "@type": "Organization",
-                "url": "https://ahyconsulting.com/",
-                "logo": "https://www.ahyconsulting.com/img/logo/ahyblacklogo.png"
-            }
-        </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["ProfessionalService", "CreativeWork", "Service"],
+     "image": [
+          "https://www.ahyconsulting.com/assets/ahy-logo.webp",
+          "https://www.ahyconsulting.com/assets/teams/harpreet%20copy.webp",
+          "https://www.ahyconsulting.com/assets/teams/harisingh%20copy-3.webp",
+          "https://www.ahyconsulting.com/assets/teams/mona%20copy.webp"
+        ],
+      "@id": "https://www.ahyconsulting.com/",
+      "name": "Website Design and Development Agency",
+      "description":"Magento Development experts, Wordpress Development Experts, Highly Skilled and reliable progressive stack developmeent agency.",
+      "disambiguatingDescription": "Ranked 2nd by Visual Objects for Best eCommerce Development Company in Mumbai",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Thane",
+        "addressLocality": "Mumbai",
+        "addressRegion": "MH",
+        "postalCode": "400601",
+        "addressCountry": "IN"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.9",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Harpreet Singh"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "183"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 19.1906291,
+        "longitude": 72.977028
+      },
+      "url": "https://www.ahyconsulting.com",
+      "telephone": "+91 9167676599",
+      "award": "Top eCommerce Development Company in New Jersey, Top eCommerce Development Company in Mumbai",
+      "priceRange": "$$$",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "9:00",
+          "closes": "22:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "11:30",
+          "closes": "23:00"
+        }
+      ],
+      "serviceOutput": "Website Development",
+      "brand": "Ahy Consulting",
+      "sameAs": [
+            "https://www.facebook.com/ahyconsulting",
+            "https://www.twitter.com/ahyconsulting",
+            "https://www.instagram.com/ahyconsulting/",
+            "https://www.linkedin.com/in/ahyharpreet"
+        ],
+    "isSimilarTo": [
+          "https://inchoo.net",
+          "https://www.absolutewebservices.com/",
+          "https://www.brainvire.com/",
+          "https://devtechnosys.com",
+          "https://www.mobikasa.com",
+          "https://www.ravedigital.agency",
+          "https://www.thedroidsonroids.com/",
+          "https://www.smartsites.com",
+          "https://nextbigtechnology.com"
+    ],
+      "slogan": "Technology Simplified"
+    }
+    </script>
 
-        <!-- 6. FAQ Page -->
-        <script type="application/ld+json">
-            {
-                "@context": "https://schema.org",
-                "@type": "FAQPage",
-                "name": "FAQ",
-                "mainEntity": [
-                    {
-                        "@type": "Question",
-                        "name": "Is Magento better than WooCommerce?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Magento and WooCommerce are two entirely different systems for one purpose. In some cases, Magento is the right fit, and in other cases, WooCommerce is. Usually, Magento is recommended for enterprise solutions and WooCommerce for small to midscale stores."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "How much time does it take to build an eCommerce Website?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "You can start selling online in 2 days, on your own website. For custom solutions, it may take 6-10 weeks."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "How to get a website developed for free?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "You can learn HTML, CSS, JavaScript, and WordPress to develop a basic website. We recommend focusing on your business while experts handle technology."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "How can I bring my business online? How much time will it take?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "A simple setup can take 1 week; more complex custom solutions may take a few months with a reliable advisor."
-                        }
-                    }
-                ]
-            }
-        </script>
+    <script type="application/ld+json">
+   {
+     "@context": "https://schema.org",
+     "@type": "Organization",
+     "url": "https://www.ahyconsulting.com",
+     "logo": "https://www.ahyconsulting.com/assets/ahy-logo.webp"
+   }
+   </script>
+
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","name":"FAQ","mainEntity":[{"@type":"Question","name":"Is Magento better than WooCommerce?","acceptedAnswer":{"@type":"Answer","text":"Magento and WooCommerce are two entirely different systems for one purpose. In some cases, Magento is the right fit, and in other cases, WooCommerce is. Usually, Magento is recommended for enterprise solutions and WooCommerce for small to midscale stores.  "}},{"@type":"Question","name":"How much time does it take to build an eCommerce Website?","acceptedAnswer":{"@type":"Answer","text":"You can start selling online in 2 days, on your own website. Obviously, it will come along with very basic features. For something bespoke and custom, it may take somewhere between 6-10 weeks. "}},{"@type":"Question","name":"How to get a website developed for free?","acceptedAnswer":{"@type":"Answer","text":"Absolutely. You just need to learn HTML, CSS, Javascript, jQuery, PHP, a content management system like Wordpress to develop a basic website. But we would recommend you focus on your business, and let us take care of your technology."}},{"@type":"Question","name":"How can I bring my business online? How much time will it take?","acceptedAnswer":{"@type":"Answer","text":"You need a reliable advisor, who can guide you in bringing your business online. Someone who has helped many other businesses to get online. A very simple setup can take 1 week and for something more complex and custom, it may take few months. "}}]}</script>
 
         <script defer src="/js/circletype.min.js?v=dev"></script>
         <!-- Main Styles -->
