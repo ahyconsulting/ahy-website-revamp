@@ -59,25 +59,10 @@ class ComponentLoader {
         const componentNames = [...components].map(el => el.getAttribute('data-component'));
         const uniqueNames = [...new Set(componentNames)];
 
-        // Load critical components first so the page can show/hide loaders sooner.
-        const critical = ['heroSection', 'header', 'rotatingBadge'];
-        const criticalToLoad = uniqueNames.filter(n => critical.includes(n));
-        const remaining = uniqueNames.filter(n => !critical.includes(n));
-
-        // Load critical components sequentially
-        for (const name of criticalToLoad) {
+        for (const name of uniqueNames) {
             await this.loadComponent(name);
         }
 
-        // Notify listeners that critical components are available
-        document.dispatchEvent(new CustomEvent('criticalComponentsLoaded', { detail: { components: criticalToLoad } }));
-
-        // Load remaining components sequentially
-        for (const name of remaining) {
-            await this.loadComponent(name);
-        }
-
-        // Final event when all components finished loading
         document.dispatchEvent(new CustomEvent('componentsLoaded'));
     }
 }
