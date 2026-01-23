@@ -143,27 +143,33 @@
         });
     }
 
-    // Wait for all components to load
-    function waitForComponents() {
+    // Wait for critical components (heroSection, header, rotatingBadge) to be loaded
+    function waitForCriticalComponents() {
+        console.log("Waiting for critical components to load...");
         return new Promise((resolve) => {
-            const checkComponents = () => {
-                // Check if all data-component elements are loaded
-                const components = document.querySelectorAll('[data-component]');
-                const allLoaded = Array.from(components).every(comp => {
-                    return comp.children.length > 0 || comp.innerHTML.trim() !== '';
+            const critical = ['heroSection', 'header', 'rotatingBadge'];
+
+            const check = () => {
+                const allLoaded = critical.every(name => {
+                    const placeholder = document.querySelector(`[data-component="${name}"]`);
+                    // If placeholder no longer exists it has been rendered/removed => considered loaded
+                    if (!placeholder) return true;
+                    return placeholder.children.length > 0 || placeholder.innerHTML.trim() !== '';
                 });
 
                 if (allLoaded) {
+                    console.log("Critical components loaded.");
                     resolve();
                 } else {
-                    requestAnimationFrame(checkComponents);
+                    requestAnimationFrame(check);
                 }
             };
 
-            // Add a timeout to prevent infinite waiting
+            // Safety timeout to avoid infinite waiting
             setTimeout(() => resolve(), 5000);
-            checkComponents();
+            check();
         });
+        
     }
 
     // Wait for images and media to load
@@ -250,8 +256,8 @@
             injectHeroContent(content);
             loadingState.contentLoaded = true;
             
-            // Wait for all components to load
-            await waitForComponents();
+            // Wait for the critical components (hero, header, rotating badge)
+            await waitForCriticalComponents();
             loadingState.componentsLoaded = true;
             
             // Wait for media to load
