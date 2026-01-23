@@ -42,17 +42,7 @@ export default {
 
     // 1) Try exact match first
     let res = await env.ASSETS.fetch(request);
-    if (res.status !== 404) {
-      // Force browser caching for videos
-      if (url.pathname.endsWith(".mp4")) {
-        res = new Response(res.body, res);
-        res.headers.set(
-          "Cache-Control",
-          "public, max-age=31536000, immutable"
-        );
-      }
-      return res;
-    }
+    if (res.status !== 404) return res;
 
     // 2) Try ".html" fallback
     const looksLikeFile = url.pathname.includes(".");
