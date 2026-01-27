@@ -1,35 +1,70 @@
+// alisha 
 (function () {
-
     function showToast(message, status = "success", duration = 2500) {
-
         const toast = document.getElementById("form-toast");
 
         if (!toast) return;
 
-
-
         toast.textContent = message;
-
-
 
         // reset previous color
 
         toast.className = "toast";
 
-
-
         // apply color + show
 
         toast.classList.add(status, "show");
 
-
-
         setTimeout(() => {
-
             toast.classList.remove("show");
-
         }, duration);
+    }
+    /* ----------------------------------------
+        Input Validation (Typing + Paste)
+    ---------------------------------------- */
+    function setupInputValidation() {
+        const form = document.getElementById("contactForm");
+        if (!form) return;
 
+        const firstName = form.first_name;
+        const lastName = form.last_name;
+        const phone = form.phone;
+        const email = form.email;
+
+        // Names: letters + spaces only
+        function cleanNameInput(e) {
+            e.target.value = e.target.value.replace(/[^A-Za-z\s]/g, "");
+        }
+
+        firstName.addEventListener("input", cleanNameInput);
+        lastName.addEventListener("input", cleanNameInput);
+
+        // Phone: numbers + optional leading +
+        phone.addEventListener("input", (e) => {
+            let value = e.target.value;
+
+            // Keep only digits and leading +
+            value = value.replace(/[^\d+]/g, "").replace(/(?!^)\+/g, "");
+
+            // Limit digits to 10
+            let digits = value.replace(/\D/g, "").slice(0, 10);
+
+            // Re-add + if it exists at the start
+            e.target.value = value.startsWith("+") ? "+" + digits : digits;
+        });
+
+        // Email: basic live validation
+        email.addEventListener("input", (e) => {
+            const value = e.target.value;
+            // Regex for standard email with domain (supports .com, .co.in, etc.)
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+            if (!emailPattern.test(value)) {
+                e.target.setCustomValidity("Enter a valid email with a domain, e.g., example@gmail.com");
+            } else {
+                e.target.setCustomValidity(""); // valid
+            }
+        });
     }
     let widgetId = null;
     let recaptchaInitialized = false;
@@ -43,7 +78,7 @@
         return new Date().getFullYear() - FOUNDING_YEAR;
     }
     function updateYearsOfExperience() {
-        const yoeEl = document.querySelector('.stat-card:nth-child(2) h3');
+        const yoeEl = document.querySelector(".stat-card:nth-child(2) h3");
         if (yoeEl) {
             yoeEl.textContent = calculateYearsOfExperience();
         }
@@ -62,8 +97,8 @@
         }
         console.log("🔄 Loading reCAPTCHA script...");
         recaptchaLoadPromise = new Promise((resolve, reject) => {
-            const script = document.createElement('script');
-            script.src = 'https://www.google.com/recaptcha/api.js?render=explicit';
+            const script = document.createElement("script");
+            script.src = "https://www.google.com/recaptcha/api.js?render=explicit";
             script.async = true;
             script.defer = true;
             script.onload = () => {
@@ -91,10 +126,16 @@
             console.warn("reCAPTCHA container not found");
             return;
         }
+
+        if (container.hasChildNodes()) {
+            console.log("reCAPTCHA already rendered, skipping");
+            recaptchaInitialized = true;
+            return;
+        }
         // Wait for grecaptcha to be ready
         let attempts = 0;
         while (!window.grecaptcha && attempts < 50) {
-            await new Promise(resolve => setTimeout(resolve, 100));
+            await new Promise((resolve) => setTimeout(resolve, 100));
             attempts++;
         }
         if (!window.grecaptcha) {
@@ -102,7 +143,7 @@
             return;
         }
         // Wait for grecaptcha.render to be available
-        await new Promise(resolve => {
+        await new Promise((resolve) => {
             if (window.grecaptcha.render) {
                 resolve();
             } else {
@@ -125,13 +166,14 @@
        Form Submit Trigger (Lazy Load)
     ---------------------------------------- */
     async function onSubmitClick() {
+        const currentScrollY = window.scrollY || window.pageYOffset;
         try {
             // Show loading state
             const submitBtn = document.querySelector('button[onclick="onSubmitClick()"]');
-            const originalText = submitBtn ? submitBtn.textContent : '';
+            const originalText = submitBtn ? submitBtn.textContent : "";
             if (submitBtn) {
                 submitBtn.disabled = true;
-                submitBtn.textContent = 'Loading security check...';
+                submitBtn.textContent = "Loading security check...";
             }
             // Load reCAPTCHA script if not loaded
             if (!recaptchaScriptLoaded) {
@@ -139,10 +181,16 @@
             }
             // Initialize reCAPTCHA widget if not initialized
             if (!recaptchaInitialized || widgetId === null) {
+                showToast("Security check still loading. Please wait a moment.");
+                window.scrollTo(0, currentScrollY);
+                showToast("Security check still loading. Please wait a moment.");
 
-            showToast("Security check still loading. Please wait a moment.");
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = originalText;
+                }
 
-            return;
+                return;
             }
             // Reset button
             if (submitBtn) {
@@ -150,6 +198,7 @@
                 submitBtn.textContent = originalText;
             }
             // Execute reCAPTCHA
+            window.scrollTo(0, currentScrollY);
             if (widgetId !== null && window.grecaptcha) {
                 grecaptcha.execute(widgetId);
             } else {
@@ -157,6 +206,7 @@
             }
         } catch (error) {
             console.error("Error during form submission:", error);
+            window.scrollTo(0, currentScrollY);
             alert("An error occurred. Please refresh the page and try again.");
         }
     }
@@ -165,12 +215,13 @@
        reCAPTCHA Success Callback
     ---------------------------------------- */
     function onRecaptchaSuccess(token) {
-        submitContactForm(token);
+        const currentScrollY = window.scrollY || window.pageYOffset;
+        submitContactForm(token, currentScrollY);
     }
     /* ----------------------------------------
        Submit Form
     ---------------------------------------- */
-    async function submitContactForm(recaptchaToken) {
+    async function submitContactForm(recaptchaToken, savedScrollY) {
         const form = document.getElementById("contactForm");
         if (!form) return;
         const data = {
@@ -183,15 +234,15 @@
             recaptcha: recaptchaToken,
         };
         try {
-            const response = await fetch(
-                "https://auto.yellowgap.com/webhook/contact-form-secure",
-                {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify(data),
-                }
-            );
+            const response = await fetch("https://auto.yellowgap.com/webhook/contact-form-secure", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data),
+            });
             const result = await response.json();
+            if (savedScrollY !== undefined) {
+                window.scrollTo(0, savedScrollY);
+            }
             if (response.ok) {
                 showToast("Message sent successfully!", "success");
                 form.reset();
@@ -203,6 +254,9 @@
             }
         } catch (err) {
             console.error("Form submit error:", err);
+            if (savedScrollY !== undefined) {
+                window.scrollTo(0, savedScrollY);
+            }
             showToast("Network error. Please try again later.", "warning");
         }
     }
@@ -217,42 +271,40 @@
             return;
         }
         // Load reCAPTCHA when user interacts with any form field
-        const formInputs = form.querySelectorAll('input, textarea, select');
-        
+        const formInputs = form.querySelectorAll("input, textarea, select");
+
         function triggerRecaptchaLoad() {
             if (!recaptchaScriptLoaded) {
                 console.log("🎯 User interacted with form, loading reCAPTCHA...");
-                loadRecaptchaScript().then(() => {
-                    initRecaptcha();
-                }).catch(err => {
-                    console.error("Failed to load reCAPTCHA:", err);
-                });
+                loadRecaptchaScript()
+                    .then(() => {
+                        initRecaptcha();
+                    })
+                    .catch((err) => {
+                        console.error("Failed to load reCAPTCHA:", err);
+                    });
             }
         }
-        formInputs.forEach(input => {
-            input.addEventListener('focus', triggerRecaptchaLoad, { once: true });
-            input.addEventListener('input', triggerRecaptchaLoad, { once: true });
+        formInputs.forEach((input) => {
+            input.addEventListener("focus", triggerRecaptchaLoad, { once: true });
+            input.addEventListener("input", triggerRecaptchaLoad, { once: true });
         });
         // Also trigger on form hover (for desktop users)
-        form.addEventListener('mouseenter', triggerRecaptchaLoad, { once: true });
+        form.addEventListener("mouseenter", triggerRecaptchaLoad, { once: true });
     }
     /* ----------------------------------------
        Button Text Animation (Run Once)
     ---------------------------------------- */
     function animateButtons() {
-        document
-            .querySelectorAll('.btn-anim:not([data-animated])')
-            .forEach((btn) => {
-                btn.setAttribute("data-animated", "true");
-                const text = btn.textContent.trim();
-                const spans = text
-                    .split("")
-                    .map((char) =>
-                        char === " " ? "&nbsp;" : `<span>${char}</span>`
-                    )
-                    .join("");
-                btn.innerHTML = `<div>${spans}</div>`;
-            });
+        document.querySelectorAll(".btn-anim:not([data-animated])").forEach((btn) => {
+            btn.setAttribute("data-animated", "true");
+            const text = btn.textContent.trim();
+            const spans = text
+                .split("")
+                .map((char) => (char === " " ? "&nbsp;" : `<span>${char}</span>`))
+                .join("");
+            btn.innerHTML = `<div>${spans}</div>`;
+        });
     }
     /* ----------------------------------------
        Init When Component Loaded
@@ -261,6 +313,7 @@
         updateYearsOfExperience();
         animateButtons();
         setupLazyLoadTriggers();
+        setupInputValidation();
         console.log("✅ Lazy reCAPTCHA initialized - will load on form interaction");
     }
     if (document.readyState === "loading") {
