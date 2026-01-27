@@ -171,7 +171,8 @@
     bottom: 0;
     width: 0;
     height: 2px;
-    background: currentColor; /* uses text color automatically */
+    background: currentColor;
+    /* uses text color automatically */
     transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
@@ -438,4 +439,12 @@
     .contact-container {
         flex-direction: column;
     }
+}
+
+#recaptcha-container {
+    position: absolute;
+    visibility: hidden;
+    pointer-events: none;
+    height: 0;
+    overflow: hidden;
 }

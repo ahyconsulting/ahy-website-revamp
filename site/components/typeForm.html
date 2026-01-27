@@ -54,33 +54,33 @@
         </div>
 
         <!-- Right side Typeform embed -->
-        <!-- <div class="contact-form"> -->
-            <!-- <form id="contactForm" onsubmit="event.preventDefault(); onSubmitClick();">
+        <div class="contact-form">
+            <form id="contactForm" onsubmit="event.preventDefault(); onSubmitClick();">
                 <div class="form-row">
                     <div class="form-group">
                         <label for="first_name">First Name</label>
-                        <input type="text" id="first_name" name="first_name" placeholder="Jane" required />
+                        <input type="text" id="first_name" name="first_name" placeholder="Jane" autocomplete="given-name" pattern="[A-Za-z\s]+" title="Only letters are allowed" required />
                     </div>
 
                     <div class="form-group">
                         <label for="last_name">Last Name</label>
-                        <input type="text" id="last_name" name="last_name" placeholder="Smith" required />
+                        <input type="text" id="last_name" name="last_name" placeholder="Smith" autocomplete="family-name" pattern="[A-Za-z\s]+" title="Only letters are allowed" required />
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="phone">Phone</label>
-                    <input type="tel" id="phone" name="phone" placeholder="(201) 555-0123" required />
+                    <input type="tel" id="phone" name="phone" placeholder="(201) 555-0123" autocomplete="tel" inputmode="numeric" pattern="\+?[0-9]{7,15}" title="Enter a valid phone number" required />
                 </div>
 
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="name@example.com" required />
+                    <input type="email" id="email" name="email" placeholder="name@example.com" autocomplete="email" required />
                 </div>
 
                 <div class="form-group">
                     <label for="company">Company</label>
-                    <input type="text" id="company" name="company" placeholder="Company" />
+                    <input type="text" id="company" name="company" placeholder="Company" autocomplete="organization" />
                 </div>
 
                 <div class="form-group">
@@ -89,10 +89,10 @@
                 </div>
 
                 <button class="btn-anim" type="submit">Send Message</button>
-            </form> -->
+            </form>
 
             <!-- Invisible reCAPTCHA container -->
-            <!-- <div id="recaptcha-container"></div> -->
-        <!-- </div> -->
+            <div id="recaptcha-container"></div>
+        </div>
     </div>
 </section>
